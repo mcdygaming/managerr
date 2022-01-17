@@ -250,6 +250,10 @@ extras_help: |
           _ATAU_
       ➩ `/cash 1 usd inr`
          Keluaran: `1,0 USD = 75,505 INR`
+    *Modul Musik:*
+    ❂ /video atau /vsong (permintaan): unduh video dari youtube
+    ❂ /music atau /song (query): unduh lagu dari server yt. (BERBASIS API)
+    ❂ /lyrics (nama lagu): Plugin ini mencari lirik lagu dengan nama lagu.
 MARKDOWN_HELP: |
     ──「 Bantuan Markdown 」──
     Markdown adalah alat pemformatan yang sangat kuat yang didukung oleh telegram. {dispatcher.bot.first_name} memiliki beberapa penyempurnaan, untuk memastikan bahwa \
@@ -370,12 +374,9 @@ fun_help: |
     ❂ /pat*:* menepuk pengguna, atau ditepuk
     ❂ /8ball*:* memprediksi menggunakan metode 8ball
     - Animasi
-    ❂ /love *:* Animasi Untuk Cinta ❤️
-    ❂ /hack *:* Animasi Untuk Meretas
-    ❂ /moon *:* Animasi Untuk Bulan
-    ❂ /block *:* Animasi Untuk Blok
-    ❂ /bombs *:* Animasi Untuk Bom
-    ❂ /kill *:* Animasi Untuk Membunuh
+    ❂ /love 
+    ❂ /hack 
+    ❂ /bombs 
     - Pengiriman
     ❂ /pasangan - dapatkan pasangan hari ini
     - Berikut adalah bantuan untuk modul Styletext:

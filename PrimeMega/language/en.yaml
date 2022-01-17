@@ -255,6 +255,10 @@ extras_help: |
             _OR_
       ➩ `/cash 1 usd inr`
          Output: `1.0 USD = 75.505 INR`
+    *Music Modules:*
+    ❂ /video or /vsong (query): download video from youtube
+    ❂ /music or /song (query): download song from yt servers. (API BASED)
+    ❂ /lyrics (song name) : This plugin searches for song lyrics with song name.
 MARKDOWN_HELP: |
     ──「 Markdown Help 」──
     Markdown is a very powerful formatting tool supported by telegram. {dispatcher.bot.first_name} has some enhancements, to make sure that \
@@ -375,12 +379,9 @@ fun_help: |
     ❂ /pat*:* pats a user, or get patted
     ❂ /8ball*:* predicts using 8ball method
     - Animation
-    ❂ /love *:* Animation For Love ❤️
-    ❂ /hack *:* Animation For Hacking
-    ❂ /moon *:* Animation For Moon 🌕
-    ❂ /block *:* Animation For Block 🟦
-    ❂ /bombs *:* Animation For Bomb 💣
-    ❂ /kill *:* Animation For Kill 🔪
+    ❂ /love 
+    ❂ /hack 
+    ❂ /bombs 
     - Shippering
     ❂ /couples - get couples of today
     - Here is the help for the Styletext module:
