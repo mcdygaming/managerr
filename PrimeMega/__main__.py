@@ -1,4 +1,4 @@
-import html
+import random, html
 import os
 import json
 import importlib
@@ -160,6 +160,7 @@ def test(update: Update, context: CallbackContext):
 def start(update: Update, context: CallbackContext):
     args = context.args
     chat = update.effective_chat
+    firstname = update.effective_user.first_name
     uptime = get_readable_time((time.time() - StartTime))
     if update.effective_chat.type == "private":
         if len(args) >= 1:
@@ -227,8 +228,17 @@ def start(update: Update, context: CallbackContext):
                 disable_web_page_preview=False,
             )
     else:
+        options = [
+                gs(chat.id, "group_start_array1"),
+                gs(chat.id, "group_start_array2"),
+                gs(chat.id, "group_start_array3"),
+                gs(chat.id, "group_start_array4"),
+                gs(chat.id, "group_start_array5"),
+            ]
+        chosen_options = random.choice(options)
         update.effective_message.reply_text(
-            text=gs(chat.id, "group_start_text").format(
+            text=chosen_options.format(
+                escape_markdown(firstname),
                 escape_markdown(uptime),
                 ),
             parse_mode=ParseMode.MARKDOWN

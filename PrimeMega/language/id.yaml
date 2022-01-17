@@ -17,10 +17,28 @@ pm_start_text: |
   ┗━━━━━━━━•❃°•°❀°•°❃•━━━━━━━━┛
   ✪ Tekan /help untuk melihat perintah saya yang tersedia.
    
-group_start_text: |
-  *👋🏻 Hai Sayang, aku Prime Mega!* 
+group_start_array1: |
+   *👋🏻 Hai, saya Prime Mega!*
   
-  *Mulai aktif sejak :* `{}`
+   *Mulai aktif sejak :* `{}`
+group_start_array2: |
+   *👋🏻 Halo {}, saya Prime Mega!*
+  
+   *Mulai aktif sejak :* `{}`
+group_start_array3: |
+   *👋🏻 Hai Sayang {}, saya Prime Mega!*
+  
+   *Mulai aktif sejak :* `{}`
+group_start_array4: |
+   *👋🏻 Halo, saya Prime Mega!*
+  
+   *Mulai aktif sejak :* `{}`
+group_start_array5: |
+   *👋🏻 Hai, saya Prime Mega!*
+   *Ada yang bisa saya bantu tuan {}?*
+  
+   *Mulai aktif sejak :* `{}` 
+
 pm_about_text: |
   ✺ Hai Sayang saya *Prime Mega*, bot manajemen grup yang kuat yang dibuat untuk membantu Anda mengelola grup dengan mudah. ✺
   ✪ Saya dapat membatasi pengguna.
