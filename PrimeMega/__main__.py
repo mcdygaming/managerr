@@ -210,7 +210,7 @@ def start(update: Update, context: CallbackContext):
                 reply_markup=InlineKeyboardMarkup(
                     [
                         [
-                            InlineKeyboardButton(text=gs(chat.id, "about_button"), callback_data="siesta_"),
+                            InlineKeyboardButton(text=gs(chat.id, "about_button"), callback_data="prime_"),
                         ],
                         [
                             InlineKeyboardButton(text=gs(chat.id, "help_button"), callback_data="help_back"),
@@ -294,6 +294,7 @@ def error_callback(update: Update, context: CallbackContext):
 
 def help_button(update, context):
     query = update.callback_query
+    chat = update.effective_message
     mod_match = re.match(r"help_module\((.+?)\)", query.data)
     prev_match = re.match(r"help_prev\((.+?)\)", query.data)
     next_match = re.match(r"help_next\((.+?)\)", query.data)
@@ -469,7 +470,7 @@ def prime_about_callback(update, context):
         )
 
 
-    elif query.data == "siesta_credit":
+    elif query.data == "prime_credit":
         query.message.edit_text(
             text=gs(chat.id, "pm_about_credit_text"),
             parse_mode=ParseMode.MARKDOWN,
@@ -489,6 +490,7 @@ def prime_about_callback(update, context):
 
 def Source_about_callback(update, context):
     query = update.callback_query
+    chat = update.effective_message
     if query.data == "source_":
         query.message.edit_text(
             text="๏›› This advance command for Musicplayer."
