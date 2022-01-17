@@ -18,11 +18,11 @@ pm_start_text: |
   ✪ Hit /help to see my available commands.
    
 group_start_array1: |
-  *👋🏻 Hi, I'm Prime Mega!*
+  *👋🏻 Hi sir {}, I'm Prime Mega!*
   
   *Started active since :* `{}`
 group_start_array2: |
-  *👋🏻 Hi there {}, I'm Prime Mega!*
+  *👋🏻 Hi you {}, I'm Prime Mega!*
   
   *Started active since :* `{}`
 group_start_array3: |
@@ -30,7 +30,7 @@ group_start_array3: |
   
   *Started active since :* `{}`
 group_start_array4: |
-  *👋🏻 Hello, I'm Prime Mega!*
+  *👋🏻 Hello there {}, I'm Prime Mega!*
   
   *Started active since :* `{}`
 group_start_array5: |
