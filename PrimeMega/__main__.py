@@ -294,7 +294,7 @@ def error_callback(update: Update, context: CallbackContext):
 
 def help_button(update, context):
     query = update.callback_query
-    chat = update.effective_message
+    chat = update.effective_chat
     mod_match = re.match(r"help_module\((.+?)\)", query.data)
     prev_match = re.match(r"help_prev\((.+?)\)", query.data)
     next_match = re.match(r"help_next\((.+?)\)", query.data)
