@@ -483,7 +483,7 @@ def pin(update: Update, context: CallbackContext) -> str:
                 reply_markup=InlineKeyboardMarkup(
                     [
                         [
-                            InlineKeyboardButton(text=gs(chat.id, "pin_button", url=f"{message_link}")
+                            InlineKeyboardButton(text=gs(chat.id, "pin_button"), url=f"{message_link}")
                         ]
                     ]
                 ), 
@@ -590,7 +590,7 @@ def pinned(update: Update, context: CallbackContext) -> str:
             parse_mode=ParseMode.HTML,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
-                [[InlineKeyboardButton(text=gs"pin_button", url=f"https://t.me/{link_chat_id}/{pinned_id}")]]
+                [[InlineKeyboardButton(text=gs(chat.id, "pin_button"), url=f"https://t.me/{link_chat_id}/{pinned_id}")]]
             ),
         )
 
