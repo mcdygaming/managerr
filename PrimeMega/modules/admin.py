@@ -34,21 +34,21 @@ def set_sticker(update: Update, context: CallbackContext):
     user = update.effective_user
 
     if user_can_changeinfo(chat, user, context.bot.id) is False:
-        return msg.reply_text(text=gs(chat_id, "user_change_info").format(html.escape(chat.title)))
+        return msg.reply_text(text=gs(chat_id, "user_change_info"))
 
     if msg.reply_to_message:
         if not msg.reply_to_message.sticker:
-            return msg.reply_text(text=gs(chat_id, "set_sticker").format(html.escape(chat.title)))
+            return msg.reply_text(text=gs(chat_id, "set_sticker"))
         stkr = msg.reply_to_message.sticker.set_name
         try:
             context.bot.set_chat_sticker_set(chat.id, stkr)
-            msg.reply_text(text=gs(chat_id, "set_sticker_success").format(html.escape(chat.title)))
+            msg.reply_text(text=gs(chat_id, "set_sticker_success"))
         except BadRequest as excp:
             if excp.message == "Participants_too_few":
-                return msg.reply_text(text=gs(chat.id, "set_sticker_restrictions").format(html.escape(chat.tittle)))
-            msg.reply_text(text=gs(chat.id, "set_error").format(html.escape(chat.title)))
+                return msg.reply_text(text=gs(chat.id, "set_sticker_restrictions"))
+            msg.reply_text(text=gs(chat.id, "set_error"))
     else:
-        msg.reply_text(text=gs(chat_id, "set_sticker").format(html.escape(chat.title)))
+        msg.reply_text(text=gs(chat_id, "set_sticker"))
        
     
 @bot_admin
@@ -59,7 +59,7 @@ def setchatpic(update: Update, context: CallbackContext):
     user = update.effective_user
 
     if user_can_changeinfo(chat, user, context.bot.id) is False:
-        msg.reply_text(text=gs(chat_id, "user_change_info").format(html.escape(chat.title)))
+        msg.reply_text(text=gs(chat_id, "user_change_info"))
         return
 
     if msg.reply_to_message:
@@ -68,23 +68,23 @@ def setchatpic(update: Update, context: CallbackContext):
         elif msg.reply_to_message.document:
             pic_id = msg.reply_to_message.document.file_id
         else:
-            msg.reply_text(text=gs(chat_id, "set_chatpic").format(html.escape(chat.title)))
+            msg.reply_text(text=gs(chat_id, "set_chatpic"))
             return
-        dlmsg = msg.reply_text(text=gs(chat_id, "set_chatpic_loading").format(html.escape(chat.title)))
+        dlmsg = msg.reply_text(text=gs(chat_id, "set_chatpic_loading"))
         tpic = context.bot.get_file(pic_id)
         tpic.download("gpic.png")
         try:
             with open("gpic.png", "rb") as chatp:
                 context.bot.set_chat_photo(int(chat.id), photo=chatp)
-                msg.reply_text(text=gs(chat_id, "set_chatpic_success").format(html.escape(chat.title)))
+                msg.reply_text(text=gs(chat_id, "set_chatpic_success"))
         except BadRequest as excp:
-            msg.reply_text(text=gs(chat.id, "set_error").format(html.escape(chat.title)))
+            msg.reply_text(text=gs(chat.id, "set_error"))
         finally:
             dlmsg.delete()
             if os.path.isfile("gpic.png"):
                 os.remove("gpic.png")
     else:
-        msg.reply_text(text=gs(chat.id, "set_chatpic_none").format(html.escape(chat.title)))
+        msg.reply_text(text=gs(chat.id, "set_chatpic_none"))
         
 @bot_admin
 @user_admin
@@ -94,13 +94,13 @@ def rmchatpic(update: Update, context: CallbackContext):
     user = update.effective_user
 
     if user_can_changeinfo(chat, user, context.bot.id) is False:
-        msg.reply_text(text=gs(chat.id, "rm_chatpic").format(html.escape(chat.title)))
+        msg.reply_text(text=gs(chat.id, "rm_chatpic")
         return
     try:
         context.bot.delete_chat_photo(int(chat.id))
-        msg.reply_text(text=gs(chat.id, "rm_chatpic_success").format(html.escape(chat.title)))
+        msg.reply_text(text=gs(chat.id, "rm_chatpic_success"))
     except BadRequest as excp:
-        msg.reply_text(text=gs(chat.id, "set_error").format(html.escape(chat.title)))
+        msg.reply_text(text=gs(chat.id, "set_error"))
         return
     
 @bot_admin
@@ -111,20 +111,20 @@ def set_desc(update: Update, context: CallbackContext):
     user = update.effective_user
 
     if user_can_changeinfo(chat, user, context.bot.id) is False:
-        return msg.reply_text(text=gs(chat_id, "user_change_info").format(html.escape(chat.title)))
+        return msg.reply_text(text=gs(chat_id, "user_change_info"))
 
     tesc = msg.text.split(None, 1)
     if len(tesc) >= 2:
         desc = tesc[1]
     else:
-        return msg.reply_text(text=gs(chat_id, "set_desc").format(html.escape(chat.title)))
+        return msg.reply_text(text=gs(chat_id, "set_desc"))
     try:
         if len(desc) > 255:
-            return msg.reply_text(text=gs(chat_id, "set_desc_len").format(html.escape(chat.title)))
+            return msg.reply_text(text=gs(chat_id, "set_desc_len"))
         context.bot.set_chat_description(chat.id, desc)
-        msg.reply_text(text=gs(chat_id, "set_desc_success").format(html.escape(chat.title)))
+        msg.reply_text(text=gs(chat_id, "set_desc_success"))
     except BadRequest as excp:
-        msg.reply_text(text=gs(chat_id, "set_error").format(html.escape(chat.title)))        
+        msg.reply_text(text=gs(chat_id, "set_error"))        
         
 @bot_admin
 @user_admin
@@ -135,21 +135,21 @@ def setchat_title(update: Update, context: CallbackContext):
     args = context.args
 
     if user_can_changeinfo(chat, user, context.bot.id) is False:
-        msg.reply_text(text=gs(chat_id, "user_change_info").format(html.escape(chat.title)))
+        msg.reply_text(text=gs(chat_id, "user_change_info"))
         return
 
     title = " ".join(args)
     if not title:
-        msg.reply_text(text=gs(chat_id, "set_chat_title").format(html.escape(chat.title)))
+        msg.reply_text(text=gs(chat_id, "set_chat_title"))
         return
 
     try:
         context.bot.set_chat_title(int(chat.id), str(title))
-        msg.reply_text(text=gs(chat_id, "set_chat_title_success").format(html.escape(chat.title)),
+        msg.reply_text(text=gs(chat_id, "set_chat_title_success"),
                       parse_mode=ParseMode.HTML,
                       )
     except BadRequest as excp:
-        msg.reply_text(text=gs(chat_id, "set_error").format(html.escape(chat.title)))
+        msg.reply_text(text=gs(chat_id, "set_error"))
         return
         
         
@@ -172,13 +172,13 @@ def promote(update: Update, context: CallbackContext) -> str:
         not (promoter.can_promote_members or promoter.status == "creator")
         and user.id not in DRAGONS
     ):
-        message.reply_text(text=gs(chat_id, "promote_creator").format(html.escape(chat.title)))
+        message.reply_text(text=gs(chat_id, "promote_creator"))
         return
 
     user_id = extract_user(message, args)
 
     if not user_id:
-        message.reply_text(text=gs(chat_id, "promote_id_error").format(html.escape(chat.title)))
+        message.reply_text(text=gs(chat_id, "promote_id_error"))
         return
 
     try:
@@ -187,11 +187,11 @@ def promote(update: Update, context: CallbackContext) -> str:
         return
 
     if user_member.status in ('administrator', 'creator'):
-        message.reply_text(text=gs(chat_id, "promote_admin").format(html.escape(chat.title)))
+        message.reply_text(text=gs(chat_id, "promote_admin"))
         return
 
     if user_id == bot.id:
-        message.reply_text(text=gs(chat_id, "promote_self").format(html.escape(chat.title)))
+        message.reply_text(text=gs(chat_id, "promote_self"))
         return
 
     # set same perms as bot - bot can't assign higher perms than itself!
@@ -212,12 +212,12 @@ def promote(update: Update, context: CallbackContext) -> str:
         )
     except BadRequest as err:
         if err.message == "User_not_mutual_contact":
-            message.reply_text(text=gs(chat_id, "promote_error1").format(html.escape(chat.title)))
+            message.reply_text(text=gs(chat_id, "promote_error1"))
         else:
-            message.reply_text(text=gs(chat_id, "promote_error2").format(html.escape(chat.title)))
+            message.reply_text(text=gs(chat_id, "promote_error2"))
         return
 
-    bot.sendMessage(text=gs(chat_id, "promote_success").format(html.escape(chat.title)),
+    bot.sendMessage(text=gs(chat_id, "promote_success"),
                    parse_mode=ParseMode.HTML,
                    )
     log_message = (
@@ -249,13 +249,13 @@ def fullpromote(update: Update, context: CallbackContext) -> str:
         not (promoter.can_promote_members or promoter.status == "creator")
         and user.id not in DRAGONS
     ):
-        message.reply_text(text=gs(chat_id, "promote_creator").format(html.escape(chat.title)))
+        message.reply_text(text=gs(chat_id, "promote_creator"))
         return
 
     user_id = extract_user(message, args)
 
     if not user_id:
-        message.reply_text(text=gs(chat_id, "promote_id_error").format(html.escape(chat.title)))
+        message.reply_text(text=gs(chat_id, "promote_id_error"))
         return
 
     try:
@@ -264,11 +264,11 @@ def fullpromote(update: Update, context: CallbackContext) -> str:
         return
 
     if user_member.status in ('administrator', 'creator'):
-        message.reply_text(text=gs(chat_id, "promote_admin").format(html.escape(chat.title)))
+        message.reply_text(text=gs(chat_id, "promote_admin"))
         return
 
     if user_id == bot.id:
-        message.reply_text(text=gs(chat_id, "promote_self").format(html.escape(chat.title)))
+        message.reply_text(text=gs(chat_id, "promote_self"))
         return
 
     # set same perms as bot - bot can't assign higher perms than itself!
@@ -290,17 +290,17 @@ def fullpromote(update: Update, context: CallbackContext) -> str:
         )
     except BadRequest as err:
         if err.message == "User_not_mutual_contact":
-            message.reply_text(text=gs(chat_id, "promote_error1").format(html.escape(chat.title)))
+            message.reply_text(text=gs(chat_id, "promote_error1"))
         else:
-            message.reply_text(text=gs(chat_id, "promote_error2").format(html.escape(chat.title)))
+            message.reply_text(text=gs(chat_id, "promote_error2"))
         return
 
     keyboard = InlineKeyboardMarkup([[
-        InlineKeyboardButton(
-            "Demote", callback_data="demote_({})".format(user_member.user.id))
+        InlineKeyboardButton(text=gs(chat.id,
+            "demote_button", callback_data="demote_({})".format(user_member.user.id))
     ]])
 
-    bot.sendMessage(text=gs(chat_id, "full_promote_success").format(html.escape(chat.title)),
+    bot.sendMessage(text=gs(chat_id, "full_promote_success"),
                    parse_mode=ParseMode.HTML,
                    )
     log_message = (
@@ -328,7 +328,7 @@ def demote(update: Update, context: CallbackContext) -> str:
 
     user_id = extract_user(message, args)
     if not user_id:
-        message.reply_text(text=gs(chat_id, "promote_id_error").format(html.escape(chat.title)))
+        message.reply_text(text=gs(chat_id, "promote_id_error"))
         return
 
     try:
@@ -337,15 +337,15 @@ def demote(update: Update, context: CallbackContext) -> str:
         return
 
     if user_member.status == "creator":
-        message.reply_text(text=gs(chat_id, "demote_creator").format(html.escape(chat.title)))
+        message.reply_text(text=gs(chat_id, "demote_creator"))
         return
 
     if not user_member.status == "administrator":
-        message.reply_text(text=gs(chat_id, "demote_admin").format(html.escape(chat.title)))
+        message.reply_text(text=gs(chat_id, "demote_admin"))
         return
 
     if user_id == bot.id:
-        message.reply_text(text=gs(chat_id, "demote_self").format(html.escape(chat.title)))
+        message.reply_text(text=gs(chat_id, "demote_self"))
         return
 
     try:
@@ -363,7 +363,7 @@ def demote(update: Update, context: CallbackContext) -> str:
             can_manage_voice_chats=False,
         )
 
-        bot.sendMessage(text=gs(chat_id, "demote_success").format(html.escape(chat.title)),
+        bot.sendMessage(text=gs(chat_id, "demote_success"),
                        parse_mode=ParseMode.HTML,
                        )
         log_message = (
@@ -375,7 +375,7 @@ def demote(update: Update, context: CallbackContext) -> str:
 
         return log_message
     except BadRequest:
-        message.reply_text(text=gs(chat_id, "demote_error").format(html.escape(chat.title)))
+        message.reply_text(text=gs(chat_id, "demote_error"))
         return
 
 
@@ -386,8 +386,7 @@ def refresh_admin(update, _):
     except KeyError:
         pass
 
-    update.effective_message.reply_text(text=gs(chat_id, "admin_refresh").format(html.escape(chat.title)))
-
+    update.effective_message.reply_text(text=gs(chat_id, "admin_refresh"))
 
 @connection_status
 @bot_admin
@@ -407,35 +406,35 @@ def set_title(update: Update, context: CallbackContext):
         return
 
     if not user_id:
-        message.reply_text(text=gs(chat_id, "promote_id_error").format(html.escape(chat.title)))
+        message.reply_text(text=gs(chat_id, "promote_id_error"))
         return
 
     if user_member.status == "creator":
-        message.reply_text(text=gs(chat_id, "set_title_creator").format(html.escape(chat.title)))
+        message.reply_text(text=gs(chat_id, "set_title_creator"))
         return
 
     if user_member.status != "administrator":
-        message.reply_text(text=gs(chat_id, "set_title_admin").format(html.escape(chat.title)))
+        message.reply_text(text=gs(chat_id, "set_title_admin"))
         return
 
     if user_id == bot.id:
-        message.reply_text(text=gs(chat_id, "set_title_self").format(html.escape(chat.title)))
+        message.reply_text(text=gs(chat_id, "set_title_self"))
         return
 
     if not title:
-        message.reply_text(text=gs(chat_id, "set_title_none").format(html.escape(chat.title)))
+        message.reply_text(text=gs(chat_id, "set_title_none"))
         return
 
     if len(title) > 16:
-        message.reply_text(text=gs(chat_id, "set_title_len").format(html.escape(chat.title)))
+        message.reply_text(text=gs(chat_id, "set_title_len"))
 
     try:
         bot.setChatAdministratorCustomTitle(chat.id, user_id, title)
     except BadRequest:
-        message.reply_text(text=gs(chat_id, "set_title_error").format(html.escape(chat.title)))
+        message.reply_text(text=gs(chat_id, "set_title_error"))
         return
 
-    bot.sendMessage(text=gs(chat_id, "set_title_success").format(html.escape(chat.title)),
+    bot.sendMessage(text=gs(chat_id, "set_title_success"),
                    parse_mode=ParseMode.HTML,
                    )
 
@@ -479,7 +478,7 @@ def pin(update: Update, context: CallbackContext) -> str:
             bot.pinChatMessage(
                 chat.id, prev_message.message_id, disable_notification=is_silent
             )
-            msg.reply_text(text=gs(chat_id, "pin_none").format(html.escape(chat.title)),
+            msg.reply_text(text=gs(chat_id, "pin_none"),
                 reply_markup=InlineKeyboardMarkup(
                     [
                         [
@@ -519,7 +518,7 @@ def unpin(update: Update, context: CallbackContext):
         not (unpinner.can_pin_messages or unpinner.status == "creator")
         and user.id not in DRAGONS
     ):
-        message.reply_text(text=gs(chat_id, "promote_creator").format(html.escape(chat.title)))
+        message.reply_text(text=gs(chat_id, "promote_creator"))
         return
 
     if msg.chat.username:
@@ -539,7 +538,7 @@ def unpin(update: Update, context: CallbackContext):
             context.bot.unpinChatMessage(
                 chat.id, prev_message.message_id
             )
-            msg.reply_text(text=gs(chat_id, "unpin_success").format(html.escape(chat.title)),
+            msg.reply_text(text=gs(chat_id, "unpin_success"),
                 parse_mode=ParseMode.HTML,
                 disable_web_page_preview=True,
             )
@@ -550,7 +549,7 @@ def unpin(update: Update, context: CallbackContext):
     if not prev_message and is_group:
         try:
             context.bot.unpinChatMessage(chat.id)
-            msg.reply_text(text=gs(chat_id, "unpin_last_msg").format(html.escape(chat.title)))
+            msg.reply_text(text=gs(chat_id, "unpin_last_msg"))
         except BadRequest as excp:
             if excp.message == "Message to unpin not found":
                msg.reply_text(text=gs(chat_id, "unpin_error").format(html.escape(chat.title)))
@@ -586,7 +585,7 @@ def pinned(update: Update, context: CallbackContext) -> str:
             link_chat_id = (str(msg.chat.id)).replace("-100", "")
             message_link = f"https://t.me/c/{link_chat_id}/{pinned_id}"
 
-        msg.reply_text(text=gs(chat_id, "pinned").format(html.escape(chat.title)),
+        msg.reply_text(text=gs(chat_id, "pinned"),
             reply_to_message_id=msg_id,
             parse_mode=ParseMode.HTML,
             disable_web_page_preview=True,
@@ -601,7 +600,7 @@ def pinned(update: Update, context: CallbackContext) -> str:
         )
 
     else:
-        msg.reply_text(text=gs(chat_id, "pinned_none").format(html.escape(chat.title)),
+        msg.reply_text(text=gs(chat_id, "pinned_none"),
             parse_mode=ParseMode.HTML,
         )
 
@@ -620,9 +619,9 @@ def invite(update: Update, context: CallbackContext):
             invitelink = bot.exportChatInviteLink(chat.id)
             update.effective_message.reply_text(invitelink)
         else:
-            update.effective_message.reply_text(text=gs(chat_id, "invite_error1").format(html.escape(chat.title)))
+            update.effective_message.reply_text(text=gs(chat_id, "invite_error1"))
     else:
-        update.effective_message.reply_text(text=gs(chat_id, "invite_error2").format(html.escape(chat.title)))
+        update.effective_message.reply_text(text=gs(chat_id, "invite_error2"))
 
 @connection_status
 def adminlist(update, context):
