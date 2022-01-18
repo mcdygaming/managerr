@@ -94,7 +94,7 @@ def rmchatpic(update: Update, context: CallbackContext):
     user = update.effective_user
 
     if user_can_changeinfo(chat, user, context.bot.id) is False:
-        msg.reply_text(text=gs(chat.id, "rm_chatpic")
+        msg.reply_text(text=gs(chat.id, "rm_chatpic"))
         return
     try:
         context.bot.delete_chat_photo(int(chat.id))
