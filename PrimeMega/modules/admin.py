@@ -479,7 +479,7 @@ def pin(update: Update, context: CallbackContext) -> str:
             bot.pinChatMessage(
                 chat.id, prev_message.message_id, disable_notification=is_silent
             )
-            msg.reply_text(text=gs(chat_id, "pin_none").format(html.escape(chat.title))),
+            msg.reply_text(text=gs(chat_id, "pin_none").format(html.escape(chat.title),
                 reply_markup=InlineKeyboardMarkup(
                     [
                         [
