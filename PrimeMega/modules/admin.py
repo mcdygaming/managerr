@@ -295,10 +295,16 @@ def fullpromote(update: Update, context: CallbackContext) -> str:
             message.reply_text(text=gs(chat_id, "promote_error2"))
         return
 
-    keyboard = InlineKeyboardMarkup([[
-        InlineKeyboardButton(text=gs(chat.id,
-            "demote_button", callback_data="demote_({})".format(user_member.user.id))
-    ]])
+    keyboard = InlineKeyboardMarkup(
+        [
+            [
+                InlineKeyboardButton(
+                    text=gs(chat.id,"demote_button", callback_data="demote_({})".format(user_member.user.id)
+                           )
+                )
+                    ]
+                    ]
+                )
 
     bot.sendMessage(text=gs(chat_id, "full_promote_success"),
                    parse_mode=ParseMode.HTML,
