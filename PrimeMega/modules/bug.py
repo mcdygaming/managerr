@@ -114,8 +114,16 @@ async def close_reply(msg, CallbackQuery):
     await CallbackQuery.message.delete()
 
 @Client.on_callback_query(filters.regex("close_send_photo"))
-async def close_send_photo(Client, CallbackQuery):
-    await CallbackQuery.message.delete()
+async def close_send_photo(_, CallbackQuery):
+    is_Admin = await Client.get_chat_member(
+        CallbackQuery.message.chat.id, CallbackQuery.from_user.id
+    )
+    if not is_Admin.can_delete_messages:
+        return await CallbackQuery.answer(
+            "You're not allowed to close this.", show_alert=True
+        )
+    else:
+        await CallbackQuery.message.delete()
 
 
 __mod_name__ = "Bug"
