@@ -217,7 +217,7 @@ def promote(update: Update, context: CallbackContext) -> str:
             message.reply_text(text=gs(chat_id, "promote_error2").format(html.escape(chat.title)))
         return
 
-    bot.sendMessage(text=gs(chat_id, "promote_success").format(html.escape(chat.title))
+    bot.sendMessage(text=gs(chat_id, "promote_success").format(html.escape(chat.title)),
                    parse_mode=ParseMode.HTML,
                    )
     log_message = (
@@ -300,7 +300,7 @@ def fullpromote(update: Update, context: CallbackContext) -> str:
             "Demote", callback_data="demote_({})".format(user_member.user.id))
     ]])
 
-    bot.sendMessage(text=gs(chat_id, "full_promote_success").format(html.escape(chat.title))
+    bot.sendMessage(text=gs(chat_id, "full_promote_success").format(html.escape(chat.title)),
                    parse_mode=ParseMode.HTML,
                    )
     log_message = (
@@ -363,7 +363,7 @@ def demote(update: Update, context: CallbackContext) -> str:
             can_manage_voice_chats=False,
         )
 
-        bot.sendMessage(text=gs(chat_id, "demote_success").format(html.escape(chat.title))
+        bot.sendMessage(text=gs(chat_id, "demote_success").format(html.escape(chat.title)),
                        parse_mode=ParseMode.HTML,
                        )
         log_message = (
@@ -435,7 +435,7 @@ def set_title(update: Update, context: CallbackContext):
         message.reply_text(text=gs(chat_id, "set_title_error").format(html.escape(chat.title)))
         return
 
-    bot.sendMessage(text=gs(chat_id, "set_title_success").format(html.escape(chat.title))
+    bot.sendMessage(text=gs(chat_id, "set_title_success").format(html.escape(chat.title)),
                    parse_mode=ParseMode.HTML,
                    )
 
