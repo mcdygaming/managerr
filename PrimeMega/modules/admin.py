@@ -25,7 +25,6 @@ from PrimeMega.modules.log_channel import loggable
 from PrimeMega.modules.helper_funcs.alternate import send_message
 from PrimeMega.modules.language import gs
 
-
 @bot_admin
 @user_admin
 def set_sticker(update: Update, context: CallbackContext):
