@@ -483,7 +483,8 @@ def pin(update: Update, context: CallbackContext) -> str:
                 reply_markup=InlineKeyboardMarkup(
                     [
                         [
-                            InlineKeyboardButton(text=gs(chat.id, "pin_button"), url=f"{message_link}")
+                            InlineKeyboardButton(
+                                text=gs(chat.id, "pin_button"), url=f"{message_link}")
                         ]
                     ]
                 ), 
