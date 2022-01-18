@@ -586,7 +586,7 @@ def pinned(update: Update, context: CallbackContext) -> str:
             link_chat_id = (str(msg.chat.id)).replace("-100", "")
             message_link = f"https://t.me/c/{link_chat_id}/{pinned_id}"
 
-        msg.reply_text(text=gs(chat_id, "pinned").format(html.escape(chat.title))),
+        msg.reply_text(text=gs(chat_id, "pinned").format{html.escape(chat.title)},
             reply_to_message_id=msg_id,
             parse_mode=ParseMode.HTML,
             disable_web_page_preview=True,
