@@ -146,8 +146,8 @@ antichannel_help: |
     *JIKA GUNAKAN MODE INI, HASILNYA ADA DI GROUP SELAMANYA ANDA TIDAK BISA CHAT MENGGUNAKAN CHANNEL*
     Mode Anti Channel adalah mode untuk secara otomatis melarang pengguna yang mengobrol menggunakan Saluran.
     Perintah ini hanya dapat digunakan oleh *Admin*.
-    ❂ /antichannelmode <'on'/'yes'> *:* mengaktifkan mode anti-channel
-    ❂ /antichannelmode <'off'/'no'> *:* nonaktif anti-channel-mode
+    ❂ /antich <'on'/'yes'> *:* mengaktifkan mode anti-channel
+    ❂ /antich <'off'/'no'> *:* nonaktif anti-channel-mode
 antiflood_help: |
     ──「 Anti-Flood 」──
     Antiflood memungkinkan Anda untuk mengambil tindakan pada pengguna yang mengirim lebih dari x pesan berturut-turut. Melebihi banjir yang ditetapkan \
