@@ -5,10 +5,19 @@ import textwrap
 import bs4
 import jikanpy
 import requests
-from PrimeMega import DEV_USERS, OWNER_ID, DRAGONS, dispatcher
+from PrimeMega import (
+  DEV_USERS,
+  OWNER_ID,
+  DRAGONS,
+  dispatcher,
+)
 from PrimeMega.modules.disable import DisableAbleCommandHandler
-from telegram import (InlineKeyboardButton, InlineKeyboardMarkup, ParseMode,
-                      Update)
+from telegram import (
+  InlineKeyboardButton,
+  InlineKeyboardMarkup,
+  ParseMode,
+  Update,
+)
 from telegram.ext import CallbackContext, CallbackQueryHandler
 from PrimeMega.modules.language import gs
 
