@@ -219,7 +219,7 @@ def start(update: Update, context: CallbackContext):
                         ],
                         [
                             InlineKeyboardButton(
-                                text=gs(chat.id, "add_bot_to_group_button"), url="t.me/Siestaxbot?startgroup=new"),
+                                text=gs(chat.id, "add_bot_to_group_button"), url="t.me/PrimeMegaBot?startgroup=new"),
                         ]
                     ]
                 ),
@@ -403,7 +403,7 @@ def prime_about_callback(update, context):
                     InlineKeyboardButton(text="Musicplayer", callback_data="source_"),
                  ],
                  [
-                    InlineKeyboardButton(text="Go Back", callback_data="prime_back"),
+                    InlineKeyboardButton(text=gs(chat.id, "back_button"), callback_data="prime_back"),
                  ]
                 ]
             ),
