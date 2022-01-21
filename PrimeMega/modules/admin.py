@@ -530,7 +530,7 @@ def set_title(update: Update, context: CallbackContext):
         message.reply_text(text=gs(update.effective_chat.id, "set_title_error"))
         return
 
-    bot.sendMessage(text=gs(update.effective_chat.id, "set_title_success").format(html.escape(title),
+    bot.sendMessage(text=gs(update.effective_chat.id, "set_title_success").format(html.escape(title)),
         parse_mode=ParseMode.HTML,
     )
 
