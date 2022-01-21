@@ -32,7 +32,10 @@ def approve(update, context):
         message.reply_text(text=gs(chat.id, "approve_admin"))
         return ""
     if sql.is_approved(message.chat_id, user_id):
-        message.reply_text(text=gs(update.effective_chat.id, "approve_id_user"),
+        message.reply_text(text=gs(chat.id, "approve_id_user").format(
+                mention_html(user.id, user.first_name),
+                html.escape(chat.title),
+            ),
             parse_mode=ParseMode.MARKDOWN,
         )
         return ""
