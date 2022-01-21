@@ -765,6 +765,7 @@ del_button: "🗑️ Delete"
 
 # Approve.py Variabel
 approve_user: "I don't know who you're talking about, you're going to need to specify a user!"
+approve_id_user: "{} is already approved in {}"
 approve_admin: "User is already admin - locks, blocklists, and antiflood already don't apply to them."
 unapprove_all: "Are you sure you would like to unapprove ALL users in {}? This action cannot be undone."
 disapprove_admin: "This user is an admin, they can't be unapproved."
