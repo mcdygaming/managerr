@@ -65,14 +65,14 @@ def no_longer_afk(update: Update, context: CallbackContext):
         firstname = update.effective_user.first_name
         try:
             options = [
-                gs(chat.id, "afk_array1"),
-                gs(chat.id, "afk_array2"),
-                gs(chat.id, "afk_array3"),
-                gs(chat.id, "afk_array4"),
-                gs(chat.id, "afk_array5"),
-                gs(chat.id, "afk_array6"),
-                gs(chat.id, "afk_array7"),
-                gs(chat.id, "afk_array8"),
+                gs(update.effective_chat.id, "afk_array1"),
+                gs(update.effective_chat.id, "afk_array2"),
+                gs(update.effective_chat.id, "afk_array3"),
+                gs(update.effective_chat.id, "afk_array4"),
+                gs(update.effective_chat.id, "afk_array5"),
+                gs(update.effective_chat.id, "afk_array6"),
+                gs(update.effective_chat.id, "afk_array7"),
+                gs(update.effective_chat.id, "afk_array8"),
             ]
             chosen_option = random.choice(options)
             update.effective_message.reply_text(chosen_option.format(firstname))
