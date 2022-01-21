@@ -32,8 +32,7 @@ def approve(update, context):
         message.reply_text(text=gs(chat.id, "approve_admin"))
         return ""
     if sql.is_approved(message.chat_id, user_id):
-        message.reply_text(
-            f"[{member.user['first_name']}](tg://user?id={member.user['id']}) is already approved in {chat_title}",
+        message.reply_text(text=gs(update.effective_chat.id, "approve_id_user"),
             parse_mode=ParseMode.MARKDOWN,
         )
         return ""
