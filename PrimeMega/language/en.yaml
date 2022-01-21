@@ -731,6 +731,26 @@ afk_array8: "Where is {}?\nIn the chat!"
 afk_check: "{} is afk"
 afk_check_reason: "{} is afk.\nReason: <code>{}</code>"
 
+# bans.py Variabel
+ban_user: "⚠️ User not found."
+ban_error1: "Can't seem to find this person."
+ban_error2: "I can't seem to find this user"
+ban_self1: "Oh yeah, ban myself, noob!"
+ban_self2: "I'm not gonna BAN myself, are you crazy?"
+ban_owner: "Trying to put me against a King huh?"
+ban_dev: "I can't act against our Prince."
+ban_emperor: "Fighting this Emperor here will put user lives at risk."
+ban_demon: "Bring an order from Captain to fight a Assasin servant."
+ban_tiger: "Bring an order from Soldier to fight a Lancer servant."
+ban_wolves: "Trader access make them ban immune!"
+ban_admin: "⚠️ Cannot banned admin."
+ban_protect: "I don't feel like it"
+ban_id_error: "You haven't specified a time to ban this user for!"
+# bans.py variabel button
+unban_button: "🔄 Unban"
+del_button: "🗑️ Delete"
+
+
 # Antichannel.py Variabel
 active_antichannel: "Enabled antichannel in {}"
 disable_antuchannel: "Disabled antichannel in {}"
