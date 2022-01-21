@@ -723,6 +723,25 @@ afk_array8: "Di mana {}?\nDalam obrolan!"
 afk_check: "{} sedang afk"
 afk_check_reason: "{} sedang afk.\nAlasan: <code>{}</code>"
 
+# bans.py Variabel
+ban_user: "⚠️ Pengguna tidak ditemukan."
+ban_error1: "Sepertinya tidak dapat menemukan orang ini."
+ban_error2: "Sepertinya saya tidak dapat menemukan pengguna ini"
+ban_self1: "Oh ya, ban saya sendiri, noob!"
+ban_self2: "Saya tidak akan BAN saya sendiri, apakah Anda gila?"
+ban_owner: "Mencoba menempatkanku melawan seorang Raja ya?"
+ban_dev: "Saya tidak bisa bertindak melawan Pangeran kami."
+ban_emperor: "Melawan Kaisar ini di sini akan membahayakan nyawa pengguna."
+ban_demon: "Bawa perintah dari Kapten untuk melawan pelayan Assassin."
+ban_tiger: "Bawa perintah dari Prajurit untuk melawan pelayan Lancer."
+ban_wolves: "Akses pedagang membuat mereka kebal!"
+ban_admin: "⚠️ Tidak dapat memblokir admin."
+ban_protect: "Saya tidak merasa seperti itu"
+ban_id_error: "Anda belum menentukan waktu untuk mencekal pengguna ini!"
+# bans.py variabel button
+unban_button: "🔄 Batalkan larangan"
+del_button: "🗑️ Menghapus"
+
 # Antichannel.py Variabel
 active_antichannel: "Antichannel diaktifkan di {}"
 disable_antuchannel: "Antichannel dinonaktifkan di {}"
