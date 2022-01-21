@@ -22,14 +22,14 @@ def approve(update, context):
     user = update.effective_user
     user_id = extract_user(message, args)
     if not user_id:
-        message.reply_text(text=gs(update.effective_chat.id, "approve_user"))
+        message.reply_text(text=gs(chat.id, "approve_user"))
         return ""
     try:
         member = chat.get_member(user_id)
     except BadRequest:
         return ""
     if member.status in ("administrator", "creator"):
-        message.reply_text(text=gs(update.effective_chat.id, "approve_admin"))
+        message.reply_text(text=gs(chat.id, "approve_admin"))
         return ""
     if sql.is_approved(message.chat_id, user_id):
         message.reply_text(
