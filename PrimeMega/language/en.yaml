@@ -766,6 +766,17 @@ del_button: "🗑️ Delete"
 # Approve.py Variabel
 approve_user: "I don't know who you're talking about, you're going to need to specify a user!"
 approve_admin: "User is already admin - locks, blocklists, and antiflood already don't apply to them."
+unapprove_all: "Are you sure you would like to unapprove ALL users in {}? This action cannot be undone."
+disapprove_admin: "This user is an admin, they can't be unapproved."
+disapprove_all: "Only the chat owner can unapprove all users at once."
+disapprove_success: "Successfully Unapproved all user in this Chat."
+auth_own: "Only owner of the chat can do this."
+auth_mem: "You need to be admin to do this."
+del_approve: "Removing of all approved users has been cancelled."
+
+# approve.py button
+unapprove_button: "Unapprove all users"
+cancel_button: "Cancel"
 
 # Antichannel.py Variabel
 active_antichannel: "Enabled antichannel in {}"
