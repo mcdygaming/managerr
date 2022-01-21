@@ -758,7 +758,17 @@ del_button: "🗑️ Menghapus"
 # approve.py Variabel
 approve_user: "Saya tidak tahu siapa yang Anda bicarakan, Anda harus menentukan pengguna!"
 approve_admin: "Pengguna sudah menjadi admin - kunci, daftar blokir, dan antibanjir tidak berlaku untuk mereka."
+unapprove_all: "Apakah Anda yakin ingin membatalkan persetujuan SEMUA pengguna di {}? Tindakan ini tidak bisa dibatalkan."
+disapprove_admin: "Pengguna ini adalah admin, mereka tidak dapat ditolak."
+disapprove_all: "Hanya pemilik obrolan yang dapat membatalkan persetujuan semua pengguna sekaligus."
+disapprove_success: "Berhasil Membatalkan persetujuan semua pengguna dalam Obrolan ini."
+auth_own: "Hanya pemilik obrolan yang dapat melakukan ini."
+auth_mem: "Anda harus menjadi admin untuk melakukan ini."
+del_approve: "Penghapusan semua pengguna yang disetujui telah dibatalkan."
 
+# approve.py button
+unapprove_button: "Batalkan persetujuan semua pengguna"
+cancel_button: "Membatalkan"
 
 # Antichannel.py Variabel
 active_antichannel: "Antichannel diaktifkan di {}"
