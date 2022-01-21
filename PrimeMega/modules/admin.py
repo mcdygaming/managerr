@@ -457,7 +457,7 @@ def demote(update: Update, context: CallbackContext) -> str:
             can_manage_voice_chats=False,
         )
 
-        bot.sendMessage(text=gs(update.effective_chat.id, "demote_success").format(html.escape(title),
+        bot.sendMessage(text=gs(update.effective_chat.id, "demote_success").format(html.escape(title)),
             parse_mode=ParseMode.HTML,
         )
 
