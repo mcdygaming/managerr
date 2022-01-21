@@ -100,8 +100,7 @@ def mute(update: Update, context: CallbackContext) -> str:
             msg += f"\nReason: {html.escape(reason)}"
 
         keyboard = InlineKeyboardMarkup([[
-            InlineKeyboardButton(text=gs(chat.id
-                "unmute_button"), callback_data="unmute_({})".format(member.user.id))
+            InlineKeyboardButton(text=gs(chat.id, "unmute_button"), callback_data="unmute_({})".format(member.user.id))
         ]])
         bot.sendMessage(
             chat.id,
