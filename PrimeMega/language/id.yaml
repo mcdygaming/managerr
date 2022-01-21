@@ -755,8 +755,27 @@ snipe: "Tolong beri saya obrolan untuk digaungkan!"
 unban_button: "🔄 Batalkan larangan"
 del_button: "🗑️ Menghapus"
 
+# approve.py Variabel
+approve_user: "Saya tidak tahu siapa yang Anda bicarakan, Anda harus menentukan pengguna!"
+approve_admin: "Pengguna sudah menjadi admin - kunci, daftar blokir, dan antibanjir tidak berlaku untuk mereka."
+
+
 # Antichannel.py Variabel
 active_antichannel: "Antichannel diaktifkan di {}"
 disable_antuchannel: "Antichannel dinonaktifkan di {}"
 invalid_antichannel: "Argumen tidak dikenal {}"
 status_antichannel: "Setelan antichannel saat ini {} di {}"
+
+# muting.py variabel
+mute_user: "Sepertinya saya tidak dapat menemukan pengguna ini"
+mute_self: "Aku tidak akan MUTE diri sendiri, Seberapa tinggi kamu?"
+mute_failed: "Tidak bisa. Temukan orang lain untuk dibisukan tetapi bukan yang ini."
+mute_error: "Sial, saya tidak bisa membisukan pengguna itu."
+mute_user_error: "⚠️Pengguna ini tidak dibisukan atau telah meninggalkan grup!"
+mute_success: "Pengguna ini sudah dibisukan!"
+unmute_id: "Anda harus memberi saya nama pengguna untuk membunyikan, atau membalas seseorang untuk disuarakan."
+unmute_success: "Pengguna ini sudah memiliki hak untuk berbicara."
+tmute_error: "Anda belum menentukan waktu untuk membisukan pengguna ini!"
+
+# muting button
+unmute_button: "🔄 Membunyikan"
