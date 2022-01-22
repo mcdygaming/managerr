@@ -226,8 +226,7 @@ def promote(update: Update, context: CallbackContext) -> str:
         return
 
     bot.sendMessage(
-        chat.id,
-        f"Promoting a user in <b>{chat.title}</b>\n\nUser: {mention_html(user_member.user.id, user_member.user.first_name)}\nAdmin: {mention_html(user.id, user.first_name)}",
+            text=gs(update.effective_chat.id, "promote_success").format(html.escape(title),
         parse_mode=ParseMode.HTML,
     )
 
@@ -301,8 +300,7 @@ def lowpromote(update: Update, context: CallbackContext) -> str:
         return
 
     bot.sendMessage(
-        chat.id,
-        f"Lowpromoting a user in <b>{chat.title}<b>\n\nUser: {mention_html(user_member.user.id, user_member.user.first_name)}\nAdmin: {mention_html(user.id, user.first_name)}",
+            text=gs(update.effective_chat.id, "lowpromote_success").format(html.escape(title),
         parse_mode=ParseMode.HTML,
     )
 
@@ -392,8 +390,7 @@ def fullpromote(update: Update, context: CallbackContext) -> str:
     )
 
     bot.sendMessage(
-        chat.id,
-        f"Fullpromoting a user in <b>{chat.title}</b>\n\n<b>User: {mention_html(user_member.user.id, user_member.user.first_name)}</b>\n<b>Promoter: {mention_html(user.id, user.first_name)}</b>",
+            text=gs(update.effective_chat.id, "full_promote_success").format(html.escape(title),
         parse_mode=ParseMode.HTML,
     )
 
@@ -643,9 +640,7 @@ def unpin(update: Update, context: CallbackContext):
             msg.reply_text("Unpinned the last pinned message.")
         except BadRequest as excp:
             if excp.message == "Message to unpin not found":
-                msg.reply_text(
-                    "I can't see pinned message, Maybe already unpined, or pin Message to old 🙂"
-                )
+                msg.reply_text(text=gs(update.effective_chat.id, "unpin_error"))
             else:
                 raise
 
@@ -696,8 +691,7 @@ def pinned(update: Update, context: CallbackContext) -> str:
         )
 
     else:
-        msg.reply_text(
-            f"There is no pinned message in <b>{html.escape(chat.title)}!</b>",
+        msg.reply_text(text=gs(update.effective_chat.id, "pinned_none").format(html.escape(title)),
             parse_mode=ParseMode.HTML,
         )
 
@@ -717,13 +711,9 @@ def invite(update: Update, context: CallbackContext):
             invitelink = bot.exportChatInviteLink(chat.id)
             update.effective_message.reply_text(invitelink)
         else:
-            update.effective_message.reply_text(
-                "I don't have access to the invite link, try changing my permissions!",
-            )
+            update.effective_message.reply_text(text=gs(chat.id, "invite_error1"))
     else:
-        update.effective_message.reply_text(
-            "I can only give you invite links for supergroups and channels, sorry!",
-        )
+        update.effective_message.reply_text(text=gs(chat.id, "invite_error2"))
 
 
 @connection_status
@@ -879,8 +869,7 @@ def button(update: Update, context: CallbackContext) -> str:
             can_manage_voice_chats=False,
         )
         if demoted:
-            update.effective_message.edit_text(
-                f"Admin {mention_html(user.id, user.first_name)} Demoted {mention_html(member.user.id, member.user.first_name)}!",
+            update.effective_message.edit_text(text=gs(update.effective_chat.id, "demote_callback_success").format(html.escape(title)),
                 parse_mode=ParseMode.HTML,
             )
             query.answer("Demoted!")
@@ -891,9 +880,7 @@ def button(update: Update, context: CallbackContext) -> str:
                 f"<b>User:</b> {mention_html(member.user.id, member.user.first_name)}"
             )
     else:
-        update.effective_message.edit_text(
-            "This user is not promoted or has left the group!"
-        )
+        update.effective_message.edit_text(text=gs(chat.id, "demote_callback_error"))
         return ""
 
   
