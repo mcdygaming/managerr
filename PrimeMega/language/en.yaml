@@ -683,6 +683,7 @@ promote_error1: "I can't promote someone who isn't in the group."
 promote_error2: "An error occured while promoting."
 promote_success: "Promoting a user in <b>{}</b>\n\nUser: {}\nAdmin: {}"
 full_promote_success: "Fullpromoting a user in <b>{}</b>\n\n<b>User: {}</b>\n<b>Promoter: {}</b>"
+lowpromote_success: "Lowpromoting a user in <b>{}</b>\n\nUser: {}\nAdmin: {}"
 demote_creator: "This person CREATED the chat, how would I demote them?"
 demote_admin: "Can't demote what wasn't promoted!"
 demote_self: "I can't demote myself! Get an admin to do it for me."
@@ -796,6 +797,5 @@ unmute_id: "You'll need to either give me a username to unmute, or reply to some
 unmute_error: "This user isn't even in the chat, unmuting them won't make them talk more than they, already do!"
 unmute_success: "This user already has the right to speak."
 tmute_error: "You haven't specified a time to mute this user for!"
-
 # muting button
 unmute_button: "🔄 Unmute"
