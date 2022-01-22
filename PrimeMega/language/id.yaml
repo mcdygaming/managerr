@@ -676,6 +676,7 @@ promote_error1: "Saya tidak dapat mempromosikan seseorang yang tidak ada dalam g
 promote_error2: "Terjadi kesalahan saat mempromosikan."
 promote_success: "Mempromosikan pengguna di <b>{}</b>\n\nUser: {}\nAdmin: {}"
 full_promote_success: "Promosi penuh pengguna di <b>{}</b>\n\n<b>Pengguna: {}</b>\n<b> Promotor: {}</b>"
+lowpromote_success: "Promosi rendah pengguna di <b>{}</b>\n\nPengguna: {}\nAdmin: {}"
 demote_creator: "Orang ini MENCIPTAKAN obrolan, bagaimana cara menurunkannya?"
 demote_admin: "Tidak dapat menurunkan apa yang tidak dipromosikan!"
 demote_self: "Saya tidak bisa menurunkan diri saya sendiri! Minta admin untuk melakukannya untuk saya."
@@ -787,6 +788,5 @@ mute_success: "Pengguna ini sudah dibisukan!"
 unmute_id: "Anda harus memberi saya nama pengguna untuk membunyikan, atau membalas seseorang untuk disuarakan."
 unmute_success: "Pengguna ini sudah memiliki hak untuk berbicara."
 tmute_error: "Anda belum menentukan waktu untuk membisukan pengguna ini!"
-
 # muting button
 unmute_button: "🔄 Membunyikan"
