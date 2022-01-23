@@ -799,3 +799,14 @@ unmute_success: "This user already has the right to speak."
 tmute_error: "You haven't specified a time to mute this user for!"
 # muting button
 unmute_button: "🔄 Unmute"
+
+# rules.py variabel
+rules: "Please click the button below to see the rules."
+rules_error: "The group admins haven't set any rules for this chat yet\nThis probably doesn't mean it's lawless though...!"
+rules_success: "Successfully set rules for this group."
+del_rules: "Successfully cleared rules!"
+
+# rules button
+rules_button: "Rules"
+
+
