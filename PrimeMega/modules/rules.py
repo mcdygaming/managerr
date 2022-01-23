@@ -4,6 +4,7 @@ import PrimeMega.modules.sql.rules_sql as sql
 from PrimeMega import dispatcher
 from PrimeMega.modules.helper_funcs.chat_status import user_admin
 from PrimeMega.modules.helper_funcs.string_handling import markdown_parser
+from PrimeMega.modules.language import gs
 from telegram import (
     InlineKeyboardButton,
     InlineKeyboardMarkup,
@@ -56,13 +57,12 @@ def send_rules(update, chat_id, from_pm=False):
             "This probably doesn't mean it's lawless though...!",
         )
     elif rules and reply_msg:
-        reply_msg.reply_text(
-            "Please click the button below to see the rules.",
+        reply_msg.reply_text(text=gs(update.effective_chat.id, "rules"),
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
                         InlineKeyboardButton(
-                            text="Rules",
+                            text=gs(chat.id, "rules_button"),
                             url=f"t.me/{bot.username}?start={chat_id}",
                         ),
                     ],
@@ -70,13 +70,12 @@ def send_rules(update, chat_id, from_pm=False):
             ),
         )
     elif rules:
-        update.effective_message.reply_text(
-            "Please click the button below to see the rules.",
+        update.effective_message.reply_text(text=gs(chat.id, "rules"),
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
                         InlineKeyboardButton(
-                            text="Rules",
+                            text=gs(chat.id, "rules_button"),
                             url=f"t.me/{bot.username}?start={chat_id}",
                         ),
                     ],
@@ -84,11 +83,7 @@ def send_rules(update, chat_id, from_pm=False):
             ),
         )
     else:
-        update.effective_message.reply_text(
-            "The group admins haven't set any rules for this chat yet. "
-            "This probably doesn't mean it's lawless though...!",
-        )
-
+        update.effective_message.reply_text(text=gs(chat.id, "rules_error"))
 
 @user_admin
 def set_rules(update: Update, context: CallbackContext):
@@ -106,14 +101,14 @@ def set_rules(update: Update, context: CallbackContext):
         )
 
         sql.set_rules(chat_id, markdown_rules)
-        update.effective_message.reply_text("Successfully set rules for this group.")
+        update.effective_message.reply_text(text=gs(chat.id, "rules_success"))
 
 
 @user_admin
 def clear_rules(update: Update, context: CallbackContext):
     chat_id = update.effective_chat.id
     sql.set_rules(chat_id, "")
-    update.effective_message.reply_text("Successfully cleared rules!")
+    update.effective_message.reply_text(text=gs(chat.id, "del_rules"))
 
 
 def __stats__():
