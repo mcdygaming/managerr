@@ -790,3 +790,13 @@ unmute_success: "Pengguna ini sudah memiliki hak untuk berbicara."
 tmute_error: "Anda belum menentukan waktu untuk membisukan pengguna ini!"
 # muting button
 unmute_button: "🔄 Membunyikan"
+
+# rules.py variabel
+rules: "Silakan klik tombol di bawah ini untuk melihat aturannya."
+rules_error: "Admin grup belum menetapkan aturan apa pun untuk obrolan ini\nIni mungkin tidak berarti itu melanggar hukum ...!"
+rules_success: "Berhasil menetapkan aturan untuk grup ini."
+del_rules: "Berhasil menghapus aturan!"
+
+# rules button
+rules_button: "Aturan"
+
