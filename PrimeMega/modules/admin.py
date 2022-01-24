@@ -173,6 +173,7 @@ def promote(update: Update, context: CallbackContext) -> str:
     user = update.effective_user
 
     promoter = chat.get_member(user.id)
+    chat_id = update.effective_chat.id
 
     if (
         not (promoter.can_promote_members or promoter.status == "creator")
@@ -226,11 +227,12 @@ def promote(update: Update, context: CallbackContext) -> str:
         return
 
     bot.sendMessage(
-            text=gs(update.effective_chat.id, "promote_success").format(
-                html.escape(chat.title),
-                mention_html(user_member.user.id, user_member.user.first_name),
-                mention_html(user.id, user.first_name),
-            ),
+        chat_id,
+        text=gs(chat_id, "promote_success").format(
+            html.escape(chat.title),
+            mention_html(user_member.user.id, user_member.user.first_name),
+            mention_html(user.id, user.first_name),
+        ),
         parse_mode=ParseMode.HTML,
     )
 
@@ -258,6 +260,7 @@ def lowpromote(update: Update, context: CallbackContext) -> str:
     user = update.effective_user
 
     promoter = chat.get_member(user.id)
+    chat_id = update.effective_chat.id
 
     if (
         not (promoter.can_promote_members or promoter.status == "creator")
@@ -304,11 +307,12 @@ def lowpromote(update: Update, context: CallbackContext) -> str:
         return
 
     bot.sendMessage(
-            text=gs(update.effective_chat.id, "lowpromote_success").format(
-                html.escape(chat.title),
-                mention_html(user_member.user.id, user_member.user.first_name),
-                mention_html(user.id, user.first_name),
-            ),
+        chat_id,
+        text=gs(chat_id, "lowpromote_success").format(
+            html.escape(chat.title),
+            mention_html(user_member.user.id, user_member.user.first_name),
+            mention_html(user.id, user.first_name),
+        ),
         parse_mode=ParseMode.HTML,
     )
 
@@ -336,6 +340,7 @@ def fullpromote(update: Update, context: CallbackContext) -> str:
     user = update.effective_user
 
     promoter = chat.get_member(user.id)
+    chat_id = update.effective_chat.id
 
     if (
         not (promoter.can_promote_members or promoter.status == "creator")
@@ -398,11 +403,12 @@ def fullpromote(update: Update, context: CallbackContext) -> str:
     )
 
     bot.sendMessage(
-            text=gs(update.effective_chat.id, "full_promote_success").format(
-                html.escape(chat.title),
-                mention_html(user_member.user.id, user_member.user.first_name),
-                mention_html(user.id, user.first_name),
-            ),
+        chat_id,
+        text=gs(chat_id, "full_promote_success").format(
+            html.escape(chat.title),
+            mention_html(user_member.user.id, user_member.user.first_name),
+            mention_html(user.id, user.first_name),
+        ),
         parse_mode=ParseMode.HTML,
     )
 
@@ -428,6 +434,8 @@ def demote(update: Update, context: CallbackContext) -> str:
     chat = update.effective_chat
     message = update.effective_message
     user = update.effective_user
+
+    chat_id = update.effective_chat.id
 
     user_id = extract_user(message, args)
     if not user_id:
@@ -466,7 +474,9 @@ def demote(update: Update, context: CallbackContext) -> str:
             can_manage_voice_chats=False,
         )
 
-        bot.sendMessage(text=gs(update.effective_chat.id, "demote_success").format(
+        bot.sendMessage(
+            chat_id,
+            text=gs(chat_id, "demote_success").format(
                 html.escape(chat.title),
                 mention_html(user_member.user.id, user_member.user.first_name),
                 mention_html(user.id, user.first_name)
