@@ -226,7 +226,11 @@ def promote(update: Update, context: CallbackContext) -> str:
         return
 
     bot.sendMessage(
-            text=gs(update.effective_chat.id, "promote_success").format(html.escape(title)),
+            text=gs(update.effective_chat.id, "promote_success").format(
+                html.escape(chat.title),
+                mention_html(user_member.user.id, user_member.user.first_name),
+                mention_html(user.id, user.first_name),
+            ),
         parse_mode=ParseMode.HTML,
     )
 
@@ -300,7 +304,11 @@ def lowpromote(update: Update, context: CallbackContext) -> str:
         return
 
     bot.sendMessage(
-            text=gs(update.effective_chat.id, "lowpromote_success").format(html.escape(title)),
+            text=gs(update.effective_chat.id, "lowpromote_success").format(
+                html.escape(chat.title),
+                mention_html(user_member.user.id, user_member.user.first_name),
+                mention_html(user.id, user.first_name),
+            ),
         parse_mode=ParseMode.HTML,
     )
 
@@ -390,7 +398,11 @@ def fullpromote(update: Update, context: CallbackContext) -> str:
     )
 
     bot.sendMessage(
-            text=gs(update.effective_chat.id, "full_promote_success").format(html.escape(title)),
+            text=gs(update.effective_chat.id, "full_promote_success").format(
+                html.escape(chat.title),
+                mention_html(user_member.user.id, user_member.user.first_name),
+                mention_html(user.id, user.first_name),
+            ),
         parse_mode=ParseMode.HTML,
     )
 
@@ -454,7 +466,11 @@ def demote(update: Update, context: CallbackContext) -> str:
             can_manage_voice_chats=False,
         )
 
-        bot.sendMessage(text=gs(update.effective_chat.id, "demote_success").format(html.escape(title)),
+        bot.sendMessage(text=gs(update.effective_chat.id, "demote_success").format(
+                html.escape(chat.title),
+                mention_html(user_member.user.id, user_member.user.first_name),
+                mention_html(user.id, user.first_name)
+            ),
             parse_mode=ParseMode.HTML,
         )
 
