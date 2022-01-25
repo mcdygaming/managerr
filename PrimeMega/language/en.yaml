@@ -786,6 +786,11 @@ disable_antuchannel: "Disabled antichannel in {}"
 invalid_antichannel: "Unrecognized arguments {}"
 status_antichannel: "Antichannel setting is currently {} in {}"
 
+# cash.py Variabel
+cash_error: "You forgot to mention the currency code."
+convert_error: "You forgot to mention the currency code to convert into."
+curency_error: "Currency Not Supported."
+
 # muting.py variabel
 mute_user: "I can't seem to find this user"
 mute_self: "I'm not gonna MUTE myself, How high are you?"
