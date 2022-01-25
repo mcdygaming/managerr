@@ -778,6 +778,11 @@ disable_antuchannel: "Antichannel dinonaktifkan di {}"
 invalid_antichannel: "Argumen tidak dikenal {}"
 status_antichannel: "Setelan antichannel saat ini {} di {}"
 
+# cash.py variabel
+cash_error: "Anda lupa menyebutkan kode mata uang."
+convert_error: "Anda lupa menyebutkan kode mata uang yang akan dikonversi."
+curency_error: "Mata Uang Tidak Didukung."
+
 # muting.py variabel
 mute_user: "Sepertinya saya tidak dapat menemukan pengguna ini"
 mute_self: "Aku tidak akan MUTE diri sendiri, Seberapa tinggi kamu?"
