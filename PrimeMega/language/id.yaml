@@ -828,6 +828,8 @@ warn_punch: "Terlalu banyak peringatan sekarang akan menghasilkan pukulan normal
 warn_handler: "Saya hanya mengerti on/yes/no/off!"
 set_punch: "Peringatan saat ini disetel untuk *memukul* pengguna saat mereka melebihi batas."
 set_ban: "Peringatan saat ini disetel ke *Larang* pengguna saat mereka melebihi batas."
+# warns button
+remove_button: "❌ Menghapus"
 
 
 
