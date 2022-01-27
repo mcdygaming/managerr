@@ -814,4 +814,30 @@ del_rules: "Successfully cleared rules!"
 # rules button
 rules_button: "Rules"
 
+# warns.py variabel
+warns_tigers: "Tigers cant be warned."
+warns_tigers1: "Tiger triggered an auto warn filter!\n I can't warn tigers but they should avoid abusing this."
+warns_wolf: "Wolf disasters are warn immune."
+warns_wolf1: "Wolf Disaster triggered an auto warn filter!\nI can't warn wolves but they should avoid abusing this."
+del_warns: "User already has no warns."
+warns_error: "That looks like an invalid User ID to me."
+warns_error1: "⚠️ No user has been designated!"
+reset_warns: "Warns have been reset!"
+warns_clear: "This user doesn't have any warns!"
+filter_warns: "No warning filters are active here!"
+remove_warns: "Okay, I'll stop warning people for that."
+warns_list: "That's not a current warning filter - run /warnlist for all active warning filters."
+no_filter_warns: "No warning filters are active here!"
+warn_limit: "The current warn limit is {}"
+warn_limit_minimum: "The minimum warn limit is 3!"
+update_warn_limit: "Updated the warn limit to {}"
+number_warn: "Give me a number as an arg!"
+max_warn: "Too many warns will now result in a Ban!"
+warn_punch: "Too many warns will now result in a normal punch! Users will be able to join again after."
+warn_handler: "I only understand on/yes/no/off!"
+set_punch: "Warns are currently set to *punch* users when they exceed the limits."
+set_ban: "Warns are currently set to *Ban* users when they exceed the limits."
+
+
+
 
