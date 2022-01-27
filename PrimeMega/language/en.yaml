@@ -837,7 +837,8 @@ warn_punch: "Too many warns will now result in a normal punch! Users will be abl
 warn_handler: "I only understand on/yes/no/off!"
 set_punch: "Warns are currently set to *punch* users when they exceed the limits."
 set_ban: "Warns are currently set to *Ban* users when they exceed the limits."
-
+# warns button
+remove_button: "❌ Remove"
 
 
 
