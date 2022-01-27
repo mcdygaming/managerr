@@ -805,3 +805,30 @@ del_rules: "Berhasil menghapus aturan!"
 # rules button
 rules_button: "Aturan"
 
+# warns.py variabel
+warns_tigers: "Harimau tidak bisa diperingatkan."
+warns_tigers1: "Harimau memicu filter peringatan otomatis!\n Saya tidak dapat memperingatkan harimau tetapi mereka harus menghindari penyalahgunaan ini."
+warns_wolf: "Bencana serigala diperingatkan kebal."
+warns_wolf1: "Bencana Serigala memicu filter peringatan otomatis!\nSaya tidak dapat memperingatkan serigala, tetapi mereka harus menghindari penyalahgunaan ini."
+del_warns: "Pengguna sudah tidak memiliki peringatan."
+warns_error: "Itu terlihat seperti ID Pengguna yang tidak valid bagi saya."
+warns_error1: "️⚠️ Tidak ada pengguna yang ditunjuk!"
+reset_warns: "Peringatan telah diatur ulang!"
+warns_clear: "Pengguna ini tidak memiliki peringatan!"
+filter_warns: "Tidak ada filter peringatan yang aktif di sini!"
+remove_warns: "Oke, saya akan berhenti memperingatkan orang untuk itu."
+warns_list: "Itu bukan filter peringatan saat ini - jalankan /warnlist untuk semua filter peringatan aktif."
+no_filter_warns: "Tidak ada filter peringatan yang aktif di sini!"
+warn_limit: "Batas peringatan saat ini adalah {}"
+warn_limit_minimum: "Batas peringatan minimum adalah 3!"
+update_warn_limit: "Memperbarui batas peringatan ke {}"
+number_warn: "Beri saya nomor sebagai argumen!"
+max_warn: "Terlalu banyak peringatan sekarang akan mengakibatkan Larangan!"
+warn_punch: "Terlalu banyak peringatan sekarang akan menghasilkan pukulan normal! Pengguna akan dapat bergabung lagi setelahnya."
+warn_handler: "Saya hanya mengerti on/yes/no/off!"
+set_punch: "Peringatan saat ini disetel untuk *memukul* pengguna saat mereka melebihi batas."
+set_ban: "Peringatan saat ini disetel ke *Larang* pengguna saat mereka melebihi batas."
+
+
+
+
