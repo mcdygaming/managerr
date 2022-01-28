@@ -132,7 +132,11 @@ def gban(update: Update, context: CallbackContext):
     if user_chat.type != "private":
         message.reply_text("That's not a user!")
         return
-
+    if not reason:
+        message.reply_text(
+            "Give me a reason why i should to do this, I can't do this without reason because it is danger command.",
+        )
+        return
     if sql.is_user_gbanned(user_id):
 
         if not reason:
