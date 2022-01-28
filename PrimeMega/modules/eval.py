@@ -120,7 +120,7 @@ def clear(update: Update, context: CallbackContext):
     send("Cleared locals.", bot, update)
 
 
-EXEC_HANDLER = CommandHandler(("x", "ex", "exe", "exec", "py"), execute, run_async=True)
+EXEC_HANDLER = CommandHandler(("x", "eval", "ex", "exec", "py"), execute, run_async=True)
 CLEAR_HANDLER = CommandHandler("clearlocals", clear, run_async=True)
 
 dispatcher.add_handler(EXEC_HANDLER)
