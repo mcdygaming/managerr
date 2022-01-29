@@ -27,6 +27,7 @@ AFK_REPLY_GROUP = 8
 def afk(update: Update, context: CallbackContext):
     args = update.effective_message.text.split(None, 1)
     user = update.effective_user
+    chat = update.effective_chat
 
     if not user:  # ignore channels
         return
@@ -53,6 +54,7 @@ def afk(update: Update, context: CallbackContext):
 
 def no_longer_afk(update: Update, context: CallbackContext):
     user = update.effective_user
+    chat = update.effective_chat
     message = update.effective_message
 
     if not user:  # ignore channels
