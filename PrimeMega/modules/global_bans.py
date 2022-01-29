@@ -287,7 +287,7 @@ def ungban(update: Update, context: CallbackContext):
         message.reply_text(text=gs(update.effective_chat.id, "gban_failed"))
         return
 
-    message.reply_text(text=gs(chat.id, "ungban").format(user_chat.first_name)")
+    message.reply_text(text=gs(chat.id, "ungban").format(user_chat.first_name))
 
     start_time = time.time()
     datetime_fmt = "%Y-%m-%dT%H:%M"
