@@ -791,6 +791,15 @@ cash_error: "You forgot to mention the currency code."
 convert_error: "You forgot to mention the currency code to convert into."
 curency_error: "Currency Not Supported."
 
+# feds.py variabel
+feds: "Federations can only be created by privately messaging me."
+feds_error: "Can't federate! Please contact @{} if the problem persist."
+feds_name: "Please write down the name of the federation"
+delete_feds: "Federations can only be deleted by privately messaging me."
+exist_feds: "This federation does not exist."
+own_feds: "Only federation owners can do this!"
+
+
 # global_bans.py variabel
 gban_id: "You don't seem to be referring to a user or the ID specified is incorrect.."
 gban_devs: "That user is part of the Association\nI can't act against our own."
