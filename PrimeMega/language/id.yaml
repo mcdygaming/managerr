@@ -783,6 +783,15 @@ cash_error: "Anda lupa menyebutkan kode mata uang."
 convert_error: "Anda lupa menyebutkan kode mata uang yang akan dikonversi."
 curency_error: "Mata Uang Tidak Didukung."
 
+# feds.py variabel
+feds: "Federasi hanya dapat dibuat dengan mengirimi saya pesan pribadi."
+feds_error: "Tidak bisa federasi! Harap hubungi @{} jika masalah terus berlanjut."
+feds_name: "Tolong tulis nama federasinya"
+delete_feds: "Federasi hanya dapat dihapus dengan mengirimi saya pesan pribadi."
+exist_feds: "Federasi ini tidak ada."
+own_feds: "Hanya pemilik federasi yang bisa melakukan ini!"
+
+
 # global_bans.py variabel
 gban_id: "Anda sepertinya tidak merujuk ke pengguna atau ID yang ditentukan salah.."
 gban_devs: "Pengguna itu adalah bagian dari Asosiasi\nSaya tidak bisa bertindak melawan kami sendiri."
