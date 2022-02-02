@@ -804,7 +804,7 @@ gban_tele: "Bodo! Anjeun moal tiasa nyerang téknologi asli Telegram!"
 gban_error: "Kuring henteu sigana mendakan pangguna ieu."
 gban_user: "Éta sanés pangguna!"
 gban_reason: "Pasihan abdi alesan kunaon kuring kedah ngalakukeun ieu, kuring henteu tiasa ngalakukeun ieu tanpa alesan sabab ieu mangrupikeun pesenan bahaya."
-allready_gban: "Pamaké ieu parantos diblokir; Abdi badé ngarobih alesanana, tapi anjeun henteu masihan kuring ...
+allready_gban: "Pamaké ieu parantos diblokir; Abdi badé ngarobih alesanana, tapi anjeun henteu masihan kuring ..."
 update_gban: "Pamaké ieu geus dipeungpeuk, tapi teu boga alesan disetel; Kuring geus indit sarta diropéa deui!"
 gban_success: "Rengse! Dilarang."
 gban_failed: "Pamaké ieu teu diblokir!"
