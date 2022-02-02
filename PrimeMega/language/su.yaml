@@ -823,7 +823,7 @@ mute_failed: "Teu bisa. Teangan nu lain keur dijempékeun tapi lain nu ieu."
 mute_error: "Duh, abdi teu tiasa ngajempékeun pamaké éta."
 mute_user_error: "⚠️Pamaké ieu teu acan diredam atanapi parantos kaluar tina grup!"
 mute_success: "Pamaké ieu geus diredam!"
-unmute_id: "Anjeun kudu masihan kuring ngaran pamaké pikeun ngirining, atawa ngabales ka batur keur disuarakeun".
+unmute_id: "Anjeun kudu masihan kuring ngaran pamaké pikeun ngirining, atawa ngabales ka batur keur disuarakeun"
 unmute_success: "Pamaké ieu geus boga hak pikeun nyarita."
 tmute_error: "Anjeun henteu acan netepkeun waktos pikeun ngajempékeun pangguna ieu!"
 # muting button
