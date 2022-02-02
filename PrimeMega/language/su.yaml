@@ -859,7 +859,7 @@ number_warn: "Pasihan abdi nomer salaku argumen!"
 max_warn: "Seueur teuing peringatan ayeuna bakal nyababkeun Ban!"
 warn_punch: "Seueur teuing peringatan ayeuna bakal ngahasilkeun hit normal!\nPamaké bakal tiasa gabung deui saatosna."
 warn_handler: "Kuring ngan ngarti on/yes/no/off!"
-set_punch: "Awas ayeuna disetel ka * pencét * pamaké lamun aranjeunna ngaleuwihan wates".
-set_ban: "Awas ayeuna disetel ka *Larang* pamaké lamun aranjeunna ngaleuwihan wates".
+set_punch: "Awas ayeuna disetel ka * pencét * pamaké lamun aranjeunna ngaleuwihan wates"
+set_ban: "Awas ayeuna disetel ka *Larang* pamaké lamun aranjeunna ngaleuwihan wates"
 # warns button
 remove_button: "❌ Mupus"
