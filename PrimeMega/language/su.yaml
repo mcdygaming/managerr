@@ -778,13 +778,6 @@ disable_antuchannel: "Anti saluran ditumpurkeun dina {}"
 invalid_antichannel: "Argumen teu dipikanyaho {}"
 status_antichannel: "Setélan antikanal ayeuna {} dina {}"
 
-# bug.py variabel
-pm_bug: "❎ Paréntah ieu ngan ukur dianggo dina grup."
-owner_bug: "Kumaha pamilik bot tiasa ngalaporkeun bug idiot ??"
-owenr_bug1: "Pemilik noob!"
-no_bug: "Henteu aya bug pikeun Laporan!"
-
-
 # cash.py variabel
 cash_error: "Anjeun poho nyebut kodeu mata uang."
 convert_error: "Anjeun poho nyebut kodeu mata uang pikeun ngarobah."
