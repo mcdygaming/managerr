@@ -45,6 +45,8 @@ async def bug(_, msg: Message):
     mention = "["+msg.from_user.first_name+"](tg://user?id="+str(msg.from_user.id)+")"
     datetimes_fmt = "%d-%m-%Y"
     datetimes = datetime.utcnow().strftime(datetimes_fmt)
+
+    thumb = "https://telegra.ph/file/efc27dec817626cc95016.jpg"
     
     bug_report = f"""
 **#BUG : ** **[Lord](https://t.me/Bukan_guudlooking)**
