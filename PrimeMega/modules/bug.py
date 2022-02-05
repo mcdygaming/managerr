@@ -16,6 +16,7 @@ from PrimeMega import (
     SUPPORT_CHAT as log,
 )
 from PrimeMega.utils.errors import capture_err
+from PrimeMega.modules.language import gs
 
 
 def content(msg: Message) -> [None, str]:
@@ -58,19 +59,15 @@ async def bug(_, msg: Message):
 
     
     if msg.chat.type == "private":
-        await msg.reply_text("❎ <b>This command only works in groups.</b>")
+        await msg.reply_text(text=gs(update.effective_chat.id, "pm_bug"))
         return
 
     if user_id == owner:
         if bugs:
-            await msg.reply_text(
-                f"❎ <b>How can be owner bot reporting bug idiot??</b>",
-            )
+            await msg.reply_text(text=gs(update.effective_chat.id, "owner_bug"))
             return
         else:
-            await msg.reply_text(
-                f"❎ <b>Owner noob!</b>",
-            )
+            await msg.reply_text(text=gs(update.effective_chat.id, "owner_bug1"))
     elif user_id != owner:
         if bugs:
             await msg.reply_text(
@@ -103,9 +100,7 @@ async def bug(_, msg: Message):
                 )
             )
         else:
-            await msg.reply_text(
-                f"❎ <b>No bug to Report!</b>",
-            )
+            await msg.reply_text(text=gs(update.effective_chat.id, "no_bug"))
         
     
 
