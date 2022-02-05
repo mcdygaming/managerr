@@ -87,7 +87,9 @@ def new_fed(update: Update, context: CallbackContext):
     user = update.effective_user
     message = update.effective_message
     if chat.type != "private":
-        update.effective_message.reply_text(text=gs(chat.id, "feds"))
+        update.effective_message.reply_text(
+            "Federations can only be created by privately messaging me.",
+        )
         return
     if len(message.text) == 1:
         send_message(
@@ -107,7 +109,9 @@ def new_fed(update: Update, context: CallbackContext):
 
         x = sql.new_fed(user.id, fed_name, fed_id)
         if not x:
-            update.effective_message.reply_text(text=gs(chat.id, "feds_error").format(SUPPORT_CHAT))
+            update.effective_message.reply_text(
+                f"Can't federate! Please contact @{SUPPORT_CHAT} if the problem persist.",
+            )
             return
 
         update.effective_message.reply_text(
@@ -127,25 +131,30 @@ def new_fed(update: Update, context: CallbackContext):
         except:
             LOGGER.warning("Cannot send a message to EVENT_LOGS")
     else:
-        update.effective_message.reply_text(text=gs(chat.id, "feds_name"))
+        update.effective_message.reply_text(
+            "Please write down the name of the federation",
+        )
+
 
 def del_fed(update: Update, context: CallbackContext):
     bot, args = context.bot, context.args
     chat = update.effective_chat
     user = update.effective_user
     if chat.type != "private":
-        update.effective_message.reply_text(text=gs(chat.id, "delete_feds"))
+        update.effective_message.reply_text(
+            "Federations can only be deleted by privately messaging me.",
+        )
         return
     if args:
         is_fed_id = args[0]
         getinfo = sql.get_fed_info(is_fed_id)
         if getinfo is False:
-            update.effective_message.reply_text(text=gs(chat.id, "exist_feds"))
+            update.effective_message.reply_text("This federation does not exist.")
             return
         if int(getinfo["owner"]) == int(user.id) or int(user.id) == OWNER_ID:
             fed_id = is_fed_id
         else:
-            update.effective_message.reply_text(text=gs(chat.id, "own_feds"))
+            update.effective_message.reply_text("Only federation owners can do this!")
             return
     else:
         update.effective_message.reply_text("What should I delete?")
