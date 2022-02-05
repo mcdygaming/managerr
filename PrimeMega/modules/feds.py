@@ -757,7 +757,7 @@ def fed_ban(update: Update, context: CallbackContext):
             except BadRequest as excp:
                 if excp.message in FBAN_ERRORS:
                     try:
-                        dispatcher.bot.getChat(fedschat)
+                        dispatcher.bot.getchat(fedschat)
                     except Unauthorized:
                         sql.chat_leave_fed(fedschat)
                         LOGGER.info(
@@ -798,7 +798,7 @@ def fed_ban(update: Update, context: CallbackContext):
                     except BadRequest as excp:
                         if excp.message in FBAN_ERRORS:
                             try:
-                                dispatcher.bot.getChat(fedschat)
+                                dispatcher.bot.getchat(fedschat)
                             except Unauthorized:
                                 targetfed_id = sql.get_fed_id(fedschat)
                                 sql.unsubs_fed(fed_id, targetfed_id)
@@ -952,7 +952,7 @@ def fed_ban(update: Update, context: CallbackContext):
                     except BadRequest as excp:
                         if excp.message in FBAN_ERRORS:
                             try:
-                                dispatcher.bot.getChat(fedschat)
+                                dispatcher.bot.getchat(fedschat)
                             except Unauthorized:
                                 targetfed_id = sql.get_fed_id(fedschat)
                                 sql.unsubs_fed(fed_id, targetfed_id)
@@ -1151,7 +1151,7 @@ def unfban(update: Update, context: CallbackContext):
                 except BadRequest as excp:
                     if excp.message in FBAN_ERRORS:
                         try:
-                            dispatcher.bot.getChat(fedschat)
+                            dispatcher.bot.getchat(fedschat)
                         except Unauthorized:
                             targetfed_id = sql.get_fed_id(fedschat)
                             sql.unsubs_fed(fed_id, targetfed_id)
@@ -1324,7 +1324,7 @@ def fed_broadcast(update: Update, context: CallbackContext):
                 bot.sendMessage(chat, title + text, parse_mode="markdown")
             except TelegramError:
                 try:
-                    dispatcher.bot.getChat(chat)
+                    dispatcher.bot.getchat(chat)
                 except Unauthorized:
                     failed += 1
                     sql.chat_leave_fed(chat)
@@ -1600,7 +1600,7 @@ def fed_chats(update: Update, context: CallbackContext):
     text = "<b>New chat joined the federation {}:</b>\n".format(info["fname"])
     for chats in getlist:
         try:
-            chat_name = dispatcher.bot.getChat(chats).title
+            chat_name = dispatcher.bot.getchat(chats).title
         except Unauthorized:
             sql.chat_leave_fed(chats)
             LOGGER.info(
