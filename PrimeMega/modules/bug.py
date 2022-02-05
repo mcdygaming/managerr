@@ -36,6 +36,7 @@ def content(msg: Message) -> [None, str]:
 @Client.on_message(filters.command("bug"))
 @capture_err
 async def bug(_, msg: Message):
+    chat = update.effective_chat
     if msg.chat.username:
         chat_username = (f"@{msg.chat.username} / `{msg.chat.id}`")
     else:
