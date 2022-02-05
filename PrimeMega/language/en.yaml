@@ -786,6 +786,13 @@ disable_antuchannel: "Disabled antichannel in {}"
 invalid_antichannel: "Unrecognized arguments {}"
 status_antichannel: "Antichannel setting is currently {} in {}"
 
+# bug.py variabel
+pm_bug: "❎ Perintah ini hanya berfungsi dalam grup."
+owner_bug: "Bagaimana bisa pemilik bot melaporkan bug idiot??"
+owner_bug1: "Pemilik noob!"
+no_bug: "Tidak ada bug untuk Dilaporkan!"
+
+
 # cash.py Variabel
 cash_error: "You forgot to mention the currency code."
 convert_error: "You forgot to mention the currency code to convert into."
