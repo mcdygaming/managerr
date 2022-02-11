@@ -782,7 +782,7 @@ cancel_button: "Cancel"
 
 # Antichannel.py Variabel
 active_antichannel: "Enabled antichannel in {}"
-disable_antuchannel: "Disabled antichannel in {}"
+disable_antichannel: "Disabled antichannel in {}"
 invalid_antichannel: "Unrecognized arguments {}"
 status_antichannel: "Antichannel setting is currently {} in {}"
 
