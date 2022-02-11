@@ -774,7 +774,7 @@ cancel_button: "Batalkeun"
 
 # Antichannel.py Variabel
 active_antichannel: "Anticannel diaktipkeun dina {}"
-disable_antuchannel: "Anti saluran ditumpurkeun dina {}"
+disable_antichannel: "Anti saluran ditumpurkeun dina {}"
 invalid_antichannel: "Argumen teu dipikanyaho {}"
 status_antichannel: "Setélan antikanal ayeuna {} dina {}"
 
