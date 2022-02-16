@@ -431,7 +431,7 @@ WELCOME_HELP_TEXT: |
     "❂ `{first}`*:* iki makili *jeneng ngarep* pangguna\n"
     "❂ `{pungkasan}`*:* iki makili *jeneng mburi* pangguna. Default yaiku *jeneng ngarep* yen pangguna ora duwe "
     "jeneng mburi.\n"
-    "❂ `{jeneng lengkap}`*:* iki makili *jeneng lengkap* pangguna. Default yaiku *jeneng ngarep* yen pangguna ora duwe "
+    "❂ `{fullname}`*:* iki makili *jeneng lengkap* pangguna. Default yaiku *jeneng ngarep* yen pangguna ora duwe "
     "jeneng mburi.\n"
     "❂ `{username}`*:* iki nggantosi *username* user. Default yaiku *ngomong* "user"
     "jeneng ngarep yen ora ana jeneng panganggo.\n"
@@ -547,7 +547,7 @@ notes_help: |
     ❂ /save <notename>*:* simpen pesen balesan minangka cathetan kanthi jeneng notename
     Pisah balesan kanthi `%%%` kanggo njupuk cathetan acak
     *Conto:*
-      ➩ `/simpen jeneng cathetan
+      ➩ `/save jeneng cathetan
          Wangsulan 1
          %%%
          Wangsulan 2
@@ -568,7 +568,7 @@ reports_help: |
 search_help: |
     ──「 Nggoleki 」──
      ❂ /google <query>*:* Nggoleki google
-     ❂ /image <query>*:* Telusuri gambar ing Google banjur bali\nKanggo nomer sing luwih gedhe. saka asil nemtokake lim, Contone: `/ img hello lim = 10`
+     ❂ /image <query>*:* Telusuri gambar ing Google banjur bali\nKanggo nomer sing luwih gedhe. saka asil nemtokake lim, Contone: `/img hello lim = 10`
      ❂ /app <appname>*:* Nggoleki aplikasi ing Play Store lan ngasilake rincian.
      ❂ /reverse: Nindakake panelusuran gambar mbalikke saka media sing mangsuli.
      ❂ /gps <lokasi>*:* Entuk lokasi gps.
