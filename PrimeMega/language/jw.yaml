@@ -282,8 +282,8 @@ MARKDOWN_HELP: |
     ❂ <code>[sometext](someURL)</code>: iki bakal nggawe link - pesen mung bakal nuduhake <code>sometext</code>, \
     lan nutul bakal mbukak kaca kasebut<code>someURL</code>.
     ❂ <b>Contoh:</b><code>[test](example.com)</code>
-    ❂ <code>[buttontext](buttonurl:someURL)</code>: iki minangka upgrade khusus kanggo ngidini pangguna duwe telegram\
-    tombol ing markdown sing. <code>buttontext</code> bakal ditampilake ing tombol, lan <code>someurl</code> \
+    ❂ <code>[buttontext](buttonurl:someURL)</code>: iki minangka upgrade khusus kanggo ngidini pangguna duwe telegram \
+    tombol ing markdown sing. <code>buttontext</code> bakal ditampilake ing tombol, lan <code>someurl</code>\
     bakal dadi url sing dibukak.
     <b>Tuladha:</b> <code>[Iki tombol](buttonurl:example.com)</code>
     Yen sampeyan pengin macem-macem tombol ing baris sing padha, gunakake `:same`, kaya:
@@ -646,7 +646,7 @@ warns_help: |
     ❂ /warning <userhandle>: ngelingake pangguna. Sawise 3 bebaya, pangguna bakal dicekal saka grup kasebut. Bisa uga digunakake minangka balesan.
     ❂ /dwarn <userhandle>: ngelingake pangguna lan mbusak pesen kasebut. Sawise 3 bebaya, pangguna bakal dicekal saka grup kasebut. Bisa uga digunakake minangka balesan.
     ❂ /resetwarn <userhandle>: ngreset tandha kanggo pangguna. Bisa uga digunakake minangka balesan.
-    ❂ /addwarn <keyword> <reply message>: nyetel filter peringatan ing tembung kunci tartamtu. Yen sampeyan pengin tembung kunci dadi ukara, lampirake ing kuotasi, kayata: / addwarn "ambek banget" Iki pangguna sing nesu.
+    ❂ /addwarn <keyword> <reply message>: nyetel filter peringatan ing tembung kunci tartamtu. Yen sampeyan pengin tembung kunci dadi ukara, lampirake ing kuotasi, kayata: /addwarn "ambek banget" Iki pangguna sing nesu.
     ❂ /nowwar <keyword>: stop warning filter
     ❂ /warnlimit <num>: nyetel watesan bebaya
     ❂ /strongwarn <on/yes/off/no>: Yen disetel dadi on, ngluwihi wates bebaya bakal nyebabake larangan. Yen ora, mung bakal jotosan.
@@ -669,7 +669,7 @@ set_desc_success: "Kasil nganyari katrangan obrolan ing {}!"
 set_chat_title: "Ketik sawetara teks kanggo nyetel judhul anyar ing obrolan sampeyan!"
 set_chat_title_success: "Kasil nyetel <b>{}</b> minangka judhul obrolan anyar!"
 promote_creator: "Sampeyan ora duwe hak sing perlu kanggo nindakake iku!"
-promote_id_error: "Kayane sampeyan ora ngrujuk menyang pangguna utawa ID sing ditemtokake salah.."
+promote_id_error: "Kayane sampeyan ora ngrujuk menyang pangguna utawa ID sing ditemtokake salah."
 promote_admin: "Piye carane promosi wong sing wis dadi admin?"
 promote_self: "Aku ora bisa ningkataké dhewe! Takon admin kanggo nindakake kanggo kula."
 promote_error1: "Aku ora bisa ningkataké wong sing ora ana ing grup."
@@ -791,7 +791,6 @@ delete_feds: "Federasi mung bisa dibusak dening ngirim kula pesen pribadi."
 exist_feds: "Federasi iki ora ana."
 own_feds: "Mung sing nduweni federasi bisa nindakake iki!"
 
-
 # global_bans.py variabel
 gban_id: "Sampeyan kayane ora ngrujuk menyang pangguna sing salah utawa ID sing ditemtokake.."
 gban_devs: "Panganggo iku bagéan saka Asosiasi\nAku ora bisa tumindak marang kita piyambak."
@@ -814,7 +813,6 @@ ungban2: "Wong wis dilarang. Butuh {} detik"
 no_gban: "Ora ana pangguna sing gban! Sampeyan luwih apik tinimbang sing dakkarepake..."
 antispam_on: "Antispam saiki diaktifake✅\nSaiki aku nglindhungi grup sampeyan saka potensial ancaman adoh!"
 antispam_off: "Antispam saiki dipateni❌\nScamwatch saiki dipateni❌"
-
 
 # muting.py variabel
 mute_user: "Aku ora bisa nemokake pangguna iki"
