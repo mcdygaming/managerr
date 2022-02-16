@@ -157,7 +157,7 @@ antiflood_help: |
     *Mung Admin :*
     ❂ `/setflood <int/'no'/'off'>`*:* ngaktifake utawa mateni kontrol banjir
       *Contoh:* `/setflood 10`
-    ❂ `/setfloodmode <ban/kick/mute/tban/tmute> <value>`*:* Tindakan sing kudu ditindakake nalika pangguna wis ngluwihi watesan banjir. ban / nendhang / bisu / tmute / tban
+    ❂ `/setfloodmode <ban/kick/mute/tban/tmute> <value>`*:* Tindakan sing kudu ditindakake nalika pangguna wis ngluwihi watesan banjir. ban/kick/mute/tmute/tban
     *Cathetan :*
     Nilai dibutuhake kanggo tban lan tmute!!
     Iki bisa dadi:
@@ -412,7 +412,7 @@ greetings_help: |
     ❂ /welcome <on/off>*:* ngaktifake/mateni pesen sambutan.
     ❂ /welcome *: * nuduhake setelan sambutan saiki.
     ❂ /welcome noformat *: * nuduhake setelan sambutan saiki, ora ana format - migunani kanggo daur ulang pesen sambutan sampeyan!
-    ❂ /goodbye *: * panggunaan lan argumen sing padha karo `/ welcome`.
+    ❂ /goodbye *: * panggunaan lan argumen sing padha karo `/welcome`.
     ❂ /setwelcome <sometext>*:* atur pesen sambutan khusus. Yen digunakake kanggo mbales media, gunakake media kasebut.
     ❂ /setgoodbye <sometext>*:* atur pesen pamit khusus. Yen digunakake kanggo mbales media, gunakake media kasebut.
     ❂ /resetwelcome*:* ngreset menyang pesen sambutan standar.
@@ -423,11 +423,11 @@ greetings_help: |
     *Conto:*
     pangguna gabung chatting, pangguna ninggalake chatting.
     *Welcome Markdown:*
-    ❂ /welcomehelp*:* ndeleng informasi format liyane kanggo pesen sambutan / pamit khusus.
+    ❂ /welcomehelp*:* ndeleng informasi format liyane kanggo pesen sambutan/pamit khusus.
 WELCOME_HELP_TEXT: |
     ──「 Pitulung Format Salam 」──
     "Pesen sambutan/perpisahan grup sampeyan bisa dipersonalisasi kanthi macem-macem cara. Yen sampeyan pengin pesen"
-    " kanggo nggawe siji-siji, kaya pesen sambutan standar, sampeyan bisa nggunakake variabel *iki*:\n".
+    " kanggo nggawe siji-siji, kaya pesen sambutan standar, sampeyan bisa nggunakake variabel *iki*:\n"
     "❂ `{first}`*:* iki makili *jeneng ngarep* pangguna\n"
     "❂ `{pungkasan}`*:* iki makili *jeneng mburi* pangguna. Default yaiku *jeneng ngarep* yen pangguna ora duwe "
     "jeneng mburi.\n"
@@ -445,9 +445,9 @@ WELCOME_HELP_TEXT: |
     "tombol.\n"
     f"Kanggo nggawe tombol sing nyambung menyang aturan sampeyan, gunakake iki: `[Aturan](buttonurl://t.me/{dispatcher.bot.username}?start=group_id)`."
     "Ganti wae `group_id` karo id grup sampeyan, sing bisa dipikolehi liwat /id, lan sampeyan bisa pindhah"
-    "go. Elinga yen id grup biasane didhisiki tandha `-`; iki wajib, mula aja "
+    "go. Elinga yen id grup biasane didhisiki tandha `-`; iki wajib, mula aja"
     "mbusak.\n"
-    "Sampeyan malah bisa nyetel pesen gambar/gif/video/swara minangka pesen sambutan karo "
+    "Sampeyan malah bisa nyetel pesen gambar/gif/video/swara minangka pesen sambutan karo"
     "Bales menyang medium sing dikarepake, lan nelpon `/setwelcome`."
 WELCOME_MUTE_HELP_TEXT: |
     ──「 Salam Bantuan Format Bisu 」──
