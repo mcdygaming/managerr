@@ -92,3 +92,4 @@ ShazamAPI
 html-telegraph-poster
 qrcode
 pyYAML>=5.1.2
+pony
