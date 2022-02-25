@@ -101,14 +101,14 @@ def set_rules(update: Update, context: CallbackContext):
         )
 
         sql.set_rules(chat_id, markdown_rules)
-        update.effective_message.reply_text(text=gs(chat.id, "rules_success"))
+        update.effective_message.reply_text(text=gs(update.effective_chat.id, "rules_success"))
 
 
 @user_admin
 def clear_rules(update: Update, context: CallbackContext):
     chat_id = update.effective_chat.id
     sql.set_rules(chat_id, "")
-    update.effective_message.reply_text(text=gs(chat.id, "del_rules"))
+    update.effective_message.reply_text(text=gs(update.effective_chat.id, "del_rules"))
 
 
 def __stats__():
