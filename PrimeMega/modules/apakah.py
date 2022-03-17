@@ -13,11 +13,12 @@ APAKAH_STRING = ["Iya",
                  "Pala bapak kau pecah",
                  "Apa iya?",
                  "Tanya aja sama mamak kau tu pler",
-                 "Lu tanya gua, terus gua tanya siapa?"
+                 "Lu tanya gua, terus gua tanya siapa?",
+                 "Mana gua tau njink",
                  ]
 
 
-@register(pattern="^/apakah ?(.*)")
+@register(pattern="apakah ?(.*)")
 async def apakah(event):
     quew = event.pattern_match.group(1)
     if not quew:
