@@ -97,7 +97,7 @@ help_3: |
     /playlist - Periksa Daftar Putar Tersimpan Anda Di Server.
     /deleteplaylist - Hapus semua musik yang disimpan di daftar putar Anda
 help_4: |
-    *✺ Bot Command ✺*
+   *✺ Bot Command ✺*
    /mstats - Get Top 10 Tracks Global Stats, Top 10 Users of bot, Top 10 Chats on bot, Top 10 Played in a chat etc etc.
    /msudolist - Check Sudo Users of Yukki Music Bot
    /lyrics [Music Name] - Searches Lyrics for the particular Music on web.
@@ -105,7 +105,7 @@ help_4: |
    /player -  Get a interactive Playing Panel.
    /queue or /cqueue- Check Queue List of Music.
 help_5: |
-    *✺ Perintah Ekstra *
+   *✺ Perintah Ekstra *
    /start - Mulai Bot Musik.
    /help - Dapatkan Menu Helper Perintah dengan penjelasan rinci tentang perintah.
    
