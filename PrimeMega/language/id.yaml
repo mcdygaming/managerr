@@ -74,7 +74,7 @@ pm_help_module_text: "Berikut adalah bantuan untuk modul *{}* :\n\n"
 
 # Music
 help_1: |
-"Klik tombol di bawah untuk informasi lebih lanjut. Jika Anda menghadapi masalah dalam perintah, Anda dapat menghubungi pemilik bot saya atau bertanya di obrolan dukungan.\n\nSemua perintah dapat digunakan dengan:/"
+    "Klik tombol di bawah untuk informasi lebih lanjut. Jika Anda menghadapi masalah dalam perintah, Anda dapat menghubungi pemilik bot saya atau bertanya di obrolan dukungan.\n\nSemua perintah dapat digunakan dengan:/"
 help_2: |
     *✺ Perintah Admin *
     /pause atau /cpause - Menjeda musik yang sedang diputar.
