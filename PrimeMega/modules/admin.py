@@ -546,6 +546,7 @@ def set_title(update: Update, context: CallbackContext):
 
     if len(title) > 16:
         message.reply_text(text=gs(update.effective_chat.id, "set_title_len"))
+        return
 
     try:
         bot.setChatAdministratorCustomTitle(chat.id, user_id, title)
