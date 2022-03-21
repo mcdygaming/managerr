@@ -74,13 +74,13 @@ pm_help_module_text: "Here is the help for the *{}* module :\n\n"
 
 # Music
 help_1: |
-"Click on the buttons below for more information. If you're facing any problem in command you can contact my bot owner or ask in support chat.\n\nAll commands can be used with:/"
+   "Click on the buttons below for more information. If you're facing any problem in command you can contact my bot owner or ask in support chat.\n\nAll commands can be used with:/"
 help_2: |
    *✺ Admin Command ✺*
    /pause or /cpause - Pause the playing music.
    /resume or /cresume- Resume the paused music.
-   /mute or /cmute- Mute the playing music.
-   /unmute or /cunmute- Unmute the muted music.
+   /musicmute or /cmute- Mute the playing music.
+   /musicunmute or /cunmute- Unmute the muted music.
    /skip or /cskip- Skip the current playing music.
    /stop or /cstop- Stop the playing music.
    /shuffle or /cshuffle- Randomly shuffles the queued playlist.
