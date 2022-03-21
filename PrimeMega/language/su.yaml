@@ -74,7 +74,7 @@ pm_help_module_text: "Ieu pitulung pikeun modul *{}* :\n\n"
 
 #Music
 help_1: |
-"Klik tombol di handap pikeun inpormasi anu langkung lengkep. Upami anjeun nyanghareupan masalah naon waé dina paréntah anjeun tiasa ngahubungi pamilik bot kuring atanapi naroskeun dina obrolan dukungan.\n\nSadaya paréntah tiasa dianggo sareng:/"
+    "Klik tombol di handap pikeun inpormasi anu langkung lengkep. Upami anjeun nyanghareupan masalah naon waé dina paréntah anjeun tiasa ngahubungi pamilik bot kuring atanapi naroskeun dina obrolan dukungan.\n\nSadaya paréntah tiasa dianggo sareng:/"
 help_2: |
     *✺ Komando Admin ✺*
     /pause atawa /cpause - Ngareureuhkeun musik diputer.
