@@ -72,6 +72,60 @@ pm_help_text: |
   *✺ Klik tombol ing ngisor iki kanggo katrangan babagan prentah tartamtu. ✺*
 pm_help_module_text: "Berikut adalah bantuan untuk modul *{}* :\n\n"
 
+# Music
+help_1: |
+   "Klik tombol ing ngisor iki kanggo informasi luwih lengkap. Yen sampeyan nemoni masalah ing printah, sampeyan bisa ngubungi pemilik botku utawa takon ing obrolan dhukungan.\n\nKabeh printah bisa digunakake karo:/"
+help_2: |
+    *✺ Perintah Admin ✺*
+    /pause utawa /cpause - Ngaso muter musik.
+    /resume utawa /cresume- Terusake musik sing ngaso.
+    /musicmute utawa /cmute- Bisu musik sing diputer.
+    /musicunmute utawa /cunmute- Unmute musik sing bisu.
+    /skip utawa /cskip- Skip musik sing lagi diputer.
+    /end utawa /cstop- Mungkasi muter musik.
+    / shuffle utawa /cshuffle- Ngacak dhaptar lagu sing wis antri.
+    /seek utawa /cseek - Maju Nggoleki musik kanggo durasi sampeyan
+    /seekback utawa /cseekback - Mundur Nggoleki musik kanggo durasi sampeyan
+    /restart - Wiwiti maneh bot kanggo obrolan sampeyan.
+    /auth [Jeneng pangguna] - Tambah pangguna menyang DAFTAR AUTH saka grup.
+    /unauth [Jeneng pangguna] - Mbusak pangguna saka DAFTAR AUTH grup.
+    /authusers - Priksa DAFTAR AUTH saka grup.
+help_3: |
+    *✺ Play Command ✺*
+    /play utawa /vplay utawa /cplay - Bot bakal miwiti muter pitakonan sampeyan diwenehi ing swara chatting utawa Stream link langsung ing swara chatting.
+    /channelplay [Jeneng panganggo utawa id chat] utawa [Pateni] - Sambungake saluran menyang grup lan stream musik ing obrolan swara saluran saka grup sampeyan.
+    /playlist - Priksa Dhaptar Lagu sing Disimpen Ing Server.
+    /deleteplaylist - Mbusak musik sing disimpen ing dhaptar lagu
+help_4: |
+    *✺ Bot Command ✺*
+    /mstats - Entuk Top 10 Tracks Global Stats, Top 10 Panganggo bot, Top 10 Chats ing bot, Top 10 Played ing chatting etc.
+    /msudolist - Priksa Pangguna Sudo saka Bot Musik Yukki
+    /lirics [Jeneng Musik] - Nggoleki Lirik kanggo Musik tartamtu ing web.
+    /song [Jeneng Trek] utawa [Link YT] - Download trek apa wae saka youtube ing format mp3 utawa mp4.
+    /player - Njaluk Playing Panel interaktif.
+    /queue utawa /cqueue- Priksa Dhaptar Antrian Musik.
+help_5: |
+   *✺ Ekstra Perintah ✺*
+   /start - Miwiti Bot Musik.
+   /help - Njaluk Commands Helper Menu karo panjelasan rinci printah.
+   
+   ✅<u>**Setelan Grup:**</u>
+   /setting - Njaluk setelan grup lengkap karo tombol inline
+   
+   🔗 **Pilihan ing Setelan:**
+   1️⃣ Sampeyan bisa nyetel **Kualitas Audio** sing pengin stream ing obrolan swara.
+   2️⃣ Sampeyan bisa nyetel **Kualitas Video** sing pengin stream ing obrolan swara.
+   3️⃣ **Panganggo Auth**:- Sampeyan bisa ngganti mode perintah admin saka kene kanggo kabeh wong utawa admin mung.\nYen kabeh wong, sapa wae sing ana ing grup sampeyan bakal bisa nggunakake printah admin (kayata /skip, /stop etc)
+   4️⃣ **Mode Resik:** Yen diaktifake, mbusak pesen bot sawise 5 menit saka grup sampeyan kanggo mesthekake obrolan sampeyan tetep resik lan apik.
+   5️⃣ **Command Clean** : Yen diaktifake, Bot bakal langsung mbusak printah sing dieksekusi (/play, /pause, /shuffle, /end etc).
+   6️⃣ **Setelan Play:**
+   /playmode - Njaluk panel setelan play lengkap karo tombol ngendi sampeyan bisa nyetel setelan muter grup.
+   
+   <u>Pilihan ing mode play:</u>
+   1️⃣ **Mode Panelusuran** [Langsung utawa Inline] - Ngganti mode telusuran nalika menehi mode /play.
+   2️⃣ **Prentah Admin** [Kabeh utawa Admin] - Yen kabeh wong, sapa wae sing ana ing grup sampeyan bakal bisa nggunakake perintah admin (kaya /skip, /stop etc)
+   3️⃣ **Jenis Puter** [Kabeh utawa Admin] - Yen admin, mung admin sing ana ing grup sing bisa muter musik ing obrolan swara.
+
 # Group Help Text
 group_help_text: "Telpon kula ing PM kanggo dhaptar pesenan bisa."
 group_help_modules_text: "Telpon aku ing PM kanggo bantuan *{}*"
