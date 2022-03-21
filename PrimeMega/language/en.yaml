@@ -72,6 +72,60 @@ pm_help_text: |
   *✺ Click on the button bellow to get description about specifics command. ✺*
 pm_help_module_text: "Here is the help for the *{}* module :\n\n"
 
+# Music
+help_1: |
+"Click on the buttons below for more information. If you're facing any problem in command you can contact my bot owner or ask in support chat.\n\nAll commands can be used with:/"
+help_2: |
+   *✺ Admin Command ✺*
+   /pause or /cpause - Pause the playing music.
+   /resume or /cresume- Resume the paused music.
+   /mute or /cmute- Mute the playing music.
+   /unmute or /cunmute- Unmute the muted music.
+   /skip or /cskip- Skip the current playing music.
+   /stop or /cstop- Stop the playing music.
+   /shuffle or /cshuffle- Randomly shuffles the queued playlist.
+   /seek or /cseek - Forward Seek the music to your duration
+   /seekback or /cseekback - Backward Seek the music to your duration
+   /restart - Restart bot for your chat .
+   /auth [Username] - Add a user to AUTH LIST of the group.
+   /unauth [Username] - Remove a user from AUTH LIST of the group.
+   /authusers - Check AUTH LIST of the group.
+help_3: |
+   *✺ Play Command ✺*
+   /play or /vplay or /cplay  - Bot will start playing your given query on voice chat or Stream live links on voice chats.
+   /channelplay [Chat username or id] or [Disable] - Connect channel to a group and stream music on channel's voice chat from your group.
+   /playlist  - Check Your Saved Playlist On Servers.
+   /deleteplaylist - Delete any saved music in your playlist
+help_4: |
+   *✺ Bot Command ✺*
+   /mstats - Get Top 10 Tracks Global Stats, Top 10 Users of bot, Top 10 Chats on bot, Top 10 Played in a chat etc etc.
+   /msudolist - Check Sudo Users of Yukki Music Bot
+   /lyrics [Music Name] - Searches Lyrics for the particular Music on web.
+   /song [Track Name] or [YT Link] - Download any track from youtube in mp3 or mp4 formats.
+   /player -  Get a interactive Playing Panel.
+   /queue or /cqueue- Check Queue List of Music.
+help_5: |
+   *✺ Extra Command ✺*
+   /start - Start the Music Bot.
+   /help  - Get Commands Helper Menu with detailed explanations of commands.
+   
+   ✅<u>**Group Settings:**</u>
+   /setting - Get a complete group's settings with inline buttons
+   
+   🔗 **Options in Settings:**
+   1️⃣ You can set **Audio Quality** you want to stream on voice chat.
+   2️⃣ You can set **Video Quality** you want to stream on voice chat.
+   3️⃣ **Auth Users**:- You can change admin commands mode from here to everyone or admins only.\nIf everyone, anyone present in you group will be able to use admin commands(like /skip, /stop etc)
+   4️⃣ **Clean Mode:** When enabled deletes the bot's messages after 5 mins from your group to make sure your chat remains clean and good.
+   5️⃣ **Command Clean** : When activated, Bot will delete its executed commands (/play, /pause, /shuffle, /stop etc) immediately.
+   6️⃣ **Play Settings:**
+   /playmode - Get a complete play settings panel with buttons where you can set your group's play settings. 
+   
+   <u>Options in playmode:</u>
+   1️⃣ **Search Mode** [Direct or Inline] - Changes your search mode while you give /play mode.
+   2️⃣ **Admin Commands** [Everyone or Admins] - If everyone, anyone present in you group will be able to use admin commands(like /skip, /stop etc)
+   3️⃣ **Play Type** [Everyone or Admins] - If admins, only admins present in group can play music on voice chat.
+
 # Group Help Text
 group_help_text: "Contact me in PM to get the list of possible commands."
 group_help_modules_text: "Contact me in PM to get help of *{}*"
