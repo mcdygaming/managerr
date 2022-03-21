@@ -509,12 +509,12 @@ def Source_about_callback(update, context):
             reply_markup=InlineKeyboardMarkup(
                 [
                  [
-                     InlineKeyboardButton(text=gs(update.effective_chat.id, "help_2"), callback_data="music_admin"),
-                     InlineKeyboardButton(text=gs(update.effective_chat.id, "help_3"), callback_data="play_music"),
+                     InlineKeyboardButton(text=gs(update.effective_chat.id, "admin_button"), callback_data="music_admin"),
+                     InlineKeyboardButton(text=gs(update.effective_chat.id, "play_button"), callback_data="play_music"),
                  ],
                  [
-                     InlineKeyboardButton(text=gs(update.effective_chat.id, "help_4"), callback_data="bot_music"),
-                     InlineKeyboardButton(text=gs(update.effective_chat.id, "help_5"), callback_data="extra_music"),
+                     InlineKeyboardButton(text=gs(update.effective_chat.id, "bot_button"), callback_data="bot_music"),
+                     InlineKeyboardButton(text=gs(update.effective_chat.id, "extra_button"), callback_data="extra_music"),
                  ],
                 ]
             ),
