@@ -509,12 +509,12 @@ def Source_about_callback(update, context):
             reply_markup=InlineKeyboardMarkup(
                 [
                  [
-                     InlineKeyboardButton(text=gs(update.effective_chat.id, "admin_button"), callback_data="music_admin"),
-                     InlineKeyboardButton(text=gs(update.effective_chat.id, "play_button"), callback_data="play_music"),
+                     InlineKeyboardButton(text=gs(chat.id, "admin_button"), callback_data="music_admin"),
+                     InlineKeyboardButton(text=gs(chat.id, "play_button"), callback_data="play_music"),
                  ],
                  [
-                     InlineKeyboardButton(text=gs(update.effective_chat.id, "bot_button"), callback_data="bot_music"),
-                     InlineKeyboardButton(text=gs(update.effective_chat.id, "extra_button"), callback_data="extra_music"),
+                     InlineKeyboardButton(text=gs(chat.id, "bot_button"), callback_data="bot_music"),
+                     InlineKeyboardButton(text=gs(chat.id, "extra_button"), callback_data="extra_music"),
                  ],
                  [
                      InlineKeyboardButton(text=gs(update.effective_chat.id, "back_button"), callback_data="prime_"),
@@ -530,7 +530,7 @@ def Source_about_callback(update, context):
             reply_markup=InlineKeyboardMakrup(
                 [
                     [
-                        InlineKeyboardButton(text=gs(update.effective_chat.id, "back_button"), callback_data="source_"),
+                        InlineKeyboardButton(text=gs(chat.id, "back_button"), callback_data="source_"),
                     ]
                 ]
             ),
@@ -543,7 +543,7 @@ def Source_about_callback(update, context):
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
-                        InlineKeyboardButton(text=gs(update.effective_chat.id, "back_button"), callback_data="source_"),
+                        InlineKeyboardButton(text=gs(chat.id, "back_button"), callback_data="source_"),
                     ]
                 ]
             ),
@@ -556,7 +556,7 @@ def Source_about_callback(update, context):
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
-                        InlineKeyboardButton(text=gs(update.effective_chat.id, "back_button"), callback_data="source_"),
+                        InlineKeyboardButton(text=gs(chat.id, "back_button"), callback_data="source_"),
                     ]
                 ]
             ),
@@ -569,7 +569,7 @@ def Source_about_callback(update, context):
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
-                        InlineKeyboardButton(text=gs(update.effective_chat.id, "back_button"), callback_data="source_"),
+                        InlineKeyboardButton(text=gs(chat.id, "back_button"), callback_data="source_"),
                     ]
                 ]
             ),
