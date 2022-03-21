@@ -509,12 +509,12 @@ def Source_about_callback(update, context):
             reply_markup=InlineKeyboardMarkup(
                 [
                  [
-                     InlineKeyboardButton(text=gs(chat.id, "help_2"), callback_data="music_admin"),
-                     InlineKeyboardButton(text=gs(chat.id, "help_3"), callback_data="play_music"),
+                     InlineKeyboardButton(text=gs(update.effective_chat.id, "help_2"), callback_data="music_admin"),
+                     InlineKeyboardButton(text=gs(update.effective_chat.id, "help_3"), callback_data="play_music"),
                  ],
                  [
-                     InlineKeyboardButton(text=gs(chat.id, "help_4"), callback_data="bot_music"),
-                     InlineKeyboardButton(text=gs(chat.id, "help_5"), callback_data="extra_music"),
+                     InlineKeyboardButton(text=gs(update.effective_chat.id, "help_4"), callback_data="bot_music"),
+                     InlineKeyboardButton(text=gs(update.effective_chat.id, "help_5"), callback_data="extra_music"),
                  ],
                 ]
             ),
@@ -547,52 +547,52 @@ def Source_about_callback(update, context):
         )
     elif query.data == "music_admin":
         query.message.edit_text(
-            text=gs(chat.id, "help_2"),
+            text=gs(update.effective_chat.id, "help_2"),
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMakrup(
                 [
                     [
-                        InlineKeyboardButton(text=gs(chat.id, "back_button"), callback_data="source_"),
+                        InlineKeyboardButton(text=gs(update.effective_chat.id, "back_button"), callback_data="source_"),
                     ]
                 ]
             ),
         )
     elif query.data == "play_music":
         query.message.edit_text(
-            text=gs(chat.id, "help_3"),
+            text=gs(update.effective_chat.id, "help_3"),
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
-                        InlineKeyboardButton(text=gs(chat.id, "back_button"), callback_data="source_"),
+                        InlineKeyboardButton(text=gs(update.effective_chat.id, "back_button"), callback_data="source_"),
                     ]
                 ]
             ),
         )
     elif query.data == "bot_music":
         qeury.message.edit_text(
-            text=gs(chat.id, "help_4"),
+            text=gs(update.effective_chat.id, "help_4"),
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
-                        InlineKeyboardButton(text=gs(chat.id, "back_button"), callback_data="source_"),
+                        InlineKeyboardButton(text=gs(update.effective_chat.id, "back_button"), callback_data="source_"),
                     ]
                 ]
             ),
         )
     elif query.data == "extra_music":
         query.message.edit_text(
-            text=gs(chat.id, "help_5"),
+            text=gs(update.effective_chat.id, "help_5"),
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
-                        InlineKeyboardButton(text=gs(chat.id, "back_button"), callback_data="source_"),
+                        InlineKeyboardButton(text=gs(update.effective_chat.id, "back_button"), callback_data="source_"),
                     ]
                 ]
             ),
