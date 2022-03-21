@@ -503,7 +503,7 @@ def Source_about_callback(update, context):
     chat = update.effective_message
     if query.data == "source_":
         query.message.edit_text(
-            text=gs(chat.id, "help_1"),
+            text=gs(update.effective_chat.id, "help_1"),
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
