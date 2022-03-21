@@ -72,6 +72,60 @@ pm_help_text: |
   *✺ Klik tombol di handap pikeun pedaran paréntah husus. ✺*
 pm_help_module_text: "Ieu pitulung pikeun modul *{}* :\n\n"
 
+#Music
+help_1: |
+"Klik tombol di handap pikeun inpormasi anu langkung lengkep. Upami anjeun nyanghareupan masalah naon waé dina paréntah anjeun tiasa ngahubungi pamilik bot kuring atanapi naroskeun dina obrolan dukungan.\n\nSadaya paréntah tiasa dianggo sareng:/"
+help_2: |
+    *✺ Komando Admin ✺*
+    /pause atawa /cpause - Ngareureuhkeun musik diputer.
+    /resume atawa /cresume- Neruskeun musik direureuhkeun.
+    /musicmute atawa /cmute- Jempékeun musik nu keur diputer.
+    /musicunmute atawa /cunmute- Unmute musik nu dijempékeun.
+    /skip atawa /cskip- Skip musik keur diputer ayeuna.
+    /end atawa /cstop- Ngeureunkeun maén musik.
+    /shuffle atawa /cshuffle- Ngacak antrian playlist.
+    /seek atawa /cseek - Maju Neangan musik kana durasi anjeun
+    /seekback atawa /cseekback - Mundur Neangan musik pikeun durasi anjeun
+    /mrestart - Balikan deui bot pikeun obrolan anjeun.
+    /auth [Username] - Tambahkeun pamaké kana AUTH DAFTAR grup.
+    /unauth [Username] - Cabut pangguna tina DAFTAR AUTH grup.
+    /authusers - Pariksa DAFTAR AUTH grup.
+help_3: |
+    *✺ Komando Puter ✺*
+    /play atawa / vplay atawa / cplay - Bot bakal mimiti muterkeun pamundut anjeun dina obrolan sora atawa Stream Tumbu live on obrolan sora.
+    /channelplay [Ngobrol ngaran pamaké atawa id] atawa [Pareuman] - Sambungkeun saluran ka grup tur ngalirkeun data musik dina obrolan sora saluran ti grup anjeun.
+    /playlist - Pariksa Daptar Puter Anjeun Disimpen Dina Server.
+    /deleteplaylist - Pupus musik anu disimpen dina daptar puter anjeun
+help_4: |
+    *✺ Komando Bot ✺*
+    /mstats - Kéngingkeun Top 10 Lagu Global Stats, Top 10 Pamaké bot, Top 10 Chat dina bot, Top 10 Dimaénkeun dina obrolan jsb jsb.
+    /msudolist - Pariksa Pamaké Sudo tina Yukki Music Bot
+    /lyrics [Ngaran Musik] - Milarian Lirik kanggo Musik khusus dina wéb.
+    /song [Ngaran Lagu] atanapi [YT Link] - Unduh lagu naon waé tina youtube dina format mp3 atanapi mp4.
+    /player - Meunangkeun Panel Playing interaktif.
+    /queue atawa / cqueue- Pariksa antrian Daptar Musik.
+help_5: |
+   *✺ Komando Tambahan ✺*
+   / ngamimitian - Mimitian Bot Musik.
+   / pitulung - Meunangkeun Komando Helper Menu kalawan katerangan lengkep ngeunaan paréntah.
+   
+   ✅<u>**Setélan Grup:**</u>
+   /setting - Meunangkeun setélan grup lengkep sareng tombol inline
+   
+   🔗 **Pilihan dina Setélan:**
+   1️⃣ Anjeun tiasa nyetél **Kualitas Audio** anu anjeun hoyong streaming dina obrolan sora.
+   2️⃣ Anjeun tiasa nyetél **Kualitas Video** anu anjeun hoyong ngalirkeun dina obrolan sora.
+   3️⃣ **Pamaké Otorisasi**:- Anjeun bisa ngarobah mode paréntah admin ti dieu ka dulur atawa admin wungkul.\nLamun dulur, saha waé nu aya di grup anjeun bakal bisa maké paréntah admin (sapertos /skip, /stop jsb)
+   4️⃣ **Mode Beresih:** Nalika diaktipkeun ngahapus pesen bot saatos 5 menit ti grup anjeun pikeun mastikeun obrolan anjeun tetep beresih sareng saé.
+   5️⃣ **Command Clean** : Nalika diaktipkeun, Bot bakal langsung ngahapus paréntah anu dieksekusi (/play, /pause, /shuffle, /stop jsb).
+   6️⃣ **Setélan Play:**
+   / playmode - Meunangkeun panel setelan muter lengkep sareng tombol dimana anjeun tiasa nyetél setélan muter grup anjeun.
+   
+   <u>Pilihan dina modeu muter:</u>
+   1️⃣ **Mode Pilarian ** [Langsung atanapi Inline] - Robah modeu milarian anjeun nalika anjeun masihan / modeu muter.
+   2️⃣ **Paréntah Admin** [Sadayana atanapi Admin] - Upami sadayana, saha waé anu aya di grup anjeun tiasa nganggo paréntah admin (sapertos / skip, /stop jsb)
+   3️⃣ **Jenis Puter** [Sadayana atanapi Admin] - Upami admin, ngan admin anu aya di grup tiasa maénkeun musik dina obrolan sora.
+
 # Group Help Text
 group_help_text: "Telepon kuring di PM pikeun daptar mungkin pesenan."
 group_help_modules_text: "Telepon kuring di PM pikeun pitulung *{}*"
