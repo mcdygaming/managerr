@@ -73,6 +73,10 @@ pm_help_text: |
 pm_help_module_text: "Berikut adalah bantuan untuk modul *{}* :\n\n"
 
 # Music
+play_button: "Tombol Play"
+admin_button: "Komando Admin"
+bot_button: "Perintah Bot"
+extra_button: "Komando Ekstra"
 help_1: |
    "Klik tombol ing ngisor iki kanggo informasi luwih lengkap. Yen sampeyan nemoni masalah ing printah, sampeyan bisa ngubungi pemilik botku utawa takon ing obrolan dhukungan.\n\nKabeh printah bisa digunakake karo:/"
 help_2: |
