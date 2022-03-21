@@ -72,6 +72,60 @@ pm_help_text: |
   *✺ Klik tombol di bawah ini untuk mendapatkan deskripsi tentang perintah spesifik. ✺*
 pm_help_module_text: "Berikut adalah bantuan untuk modul *{}* :\n\n"
 
+# Music
+help_1: |
+"Klik tombol di bawah untuk informasi lebih lanjut. Jika Anda menghadapi masalah dalam perintah, Anda dapat menghubungi pemilik bot saya atau bertanya di obrolan dukungan.\n\nSemua perintah dapat digunakan dengan:/"
+help_2: |
+    *✺ Perintah Admin *
+    /pause atau /cpause - Menjeda musik yang sedang diputar.
+    /resume atau /cresume- Melanjutkan musik yang dijeda.
+    /mute atau /cmute- Mematikan musik yang diputar.
+    /unmute atau /cunmute- Mengaktifkan musik yang dimatikan.
+    /skip atau /cskip- Lewati musik yang sedang diputar.
+    /stop atau /cstop- Menghentikan pemutaran musik.
+    /shuffle atau /cshuffle- Secara acak mengacak daftar putar yang antri.
+    /seek atau /cseek - Teruskan Cari musik sesuai durasi Anda
+    /seekback atau /cseekback - Mundur Mencari musik sesuai durasi Anda
+    /restart - Mulai ulang bot untuk obrolan Anda.
+    /auth [Nama Pengguna] - Tambahkan pengguna ke DAFTAR AUTH grup.
+    /unauth [Nama Pengguna] - Menghapus pengguna dari DAFTAR AUTH grup.
+    /authusers - Periksa DAFTAR AUTH grup.
+help_3: |
+    *✺ Mainkan Perintah *
+    /play atau /vplay atau /cplay - Bot akan mulai memainkan kueri yang Anda berikan di obrolan suara atau Streaming tautan langsung di obrolan suara.
+    /channelplay [Nama pengguna atau id obrolan] atau [Nonaktifkan] - Hubungkan saluran ke grup dan streaming musik di obrolan suara saluran dari grup Anda.
+    /playlist - Periksa Daftar Putar Tersimpan Anda Di Server.
+    /deleteplaylist - Hapus semua musik yang disimpan di daftar putar Anda
+help_4: |
+    *✺ Bot Command ✺*
+   /mstats - Get Top 10 Tracks Global Stats, Top 10 Users of bot, Top 10 Chats on bot, Top 10 Played in a chat etc etc.
+   /msudolist - Check Sudo Users of Yukki Music Bot
+   /lyrics [Music Name] - Searches Lyrics for the particular Music on web.
+   /song [Track Name] or [YT Link] - Download any track from youtube in mp3 or mp4 formats.
+   /player -  Get a interactive Playing Panel.
+   /queue or /cqueue- Check Queue List of Music.
+help_5: |
+    *✺ Perintah Ekstra *
+   /start - Mulai Bot Musik.
+   /help - Dapatkan Menu Helper Perintah dengan penjelasan rinci tentang perintah.
+   
+   <u>**Setelan Grup:*</u>
+   /setting - Dapatkan pengaturan grup lengkap dengan tombol sebaris
+   
+   **Opsi di Pengaturan:**
+   1️⃣ Anda dapat mengatur **Kualitas Audio** yang ingin Anda streaming di obrolan suara.
+   2️⃣ Anda dapat mengatur **Kualitas Video** yang ingin Anda streaming di obrolan suara.
+   3️⃣ **Pengguna Auth**:- Anda dapat mengubah mode perintah admin dari sini ke semua orang atau hanya admin.\nJika semua orang, siapa pun yang ada di grup Anda akan dapat menggunakan perintah admin (seperti /skip, /stop dll)
+   4️⃣ **Mode Bersih:** Saat diaktifkan, hapus pesan bot setelah 5 menit dari grup Anda untuk memastikan obrolan Anda tetap bersih dan baik.
+   5️⃣ **Command Clean** : Saat diaktifkan, Bot akan segera menghapus perintah yang dijalankannya (/play, /pause, /shuffle, /stop dll).
+   6️⃣ **Pengaturan Putar:**
+   /playmode - Dapatkan panel pengaturan pemutaran lengkap dengan tombol di mana Anda dapat mengatur pengaturan pemutaran grup Anda.
+   
+   <u>Opsi dalam mode putar:</u>
+   1️⃣ **Mode Pencarian** [Langsung atau Sebaris] - Mengubah mode pencarian Anda saat Anda memberikan mode /play.
+   2️⃣ **Perintah Admin** [Semua Orang atau Admin] - Jika semua orang, siapa pun yang hadir di grup Anda akan dapat menggunakan perintah admin (seperti /skip, /stop dll)
+   3️⃣ **Tipe Putar** [Semua Orang atau Admin] - Jika admin, hanya admin yang ada di grup yang dapat memutar musik di obrolan suara.
+
 # Group Help Text
 group_help_text: "Hubungi saya di PM untuk mendapatkan daftar kemungkinan perintah."
 group_help_modules_text: "Hubungi saya di PM untuk mendapatkan bantuan *{}*"
