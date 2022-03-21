@@ -503,30 +503,19 @@ def Source_about_callback(update, context):
     chat = update.effective_message
     if query.data == "source_":
         query.message.edit_text(
-            text="๏›› This advance command for Musicplayer."
-            "\n\n๏ Command for admins only."
-            "\n • `/reload` - For refreshing the adminlist."
-            "\n • `/userbotjoin` - For inviting the assistant to your groups."
-            "\n • `/userbotleave` - Use this if you want the assistant leaving your groups."
-            "\n • `/pause` - To pause the playback."
-            "\n • `/vpause` - To pause video stream."
-            "\n • `/resume` - To resuming the playback You've paused."
-            "\n • `/vresume` - To resuming video stream."
-            "\n • `/skip` - To skipping the player."
-            "\n • `/vskip` - To skipping the video stream."
-            "\n • `/end` - For end the playback."
-            "\n • `/vend` - For end the video stream."
-            "\n • `/musicplayer <on/off>` - Toggle for turn ON or turn OFF the musicplayer."
-            "\n\n๏ Command for all members."
-            "\n • `/play` or `/ytp` <query> - Playing music via YouTube."
-            "\n • `/vplay` <query or reply audio> - Playing video from YouTube.",
+            text=gs(chat.id, "help_1"),
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
                 [
                  [
-                    InlineKeyboardButton(text="Go Back", callback_data="prime_")
-                 ]
+                     InlineKeyboardButton(text=gs(chat.id, "help_2"), callback_data="music_admin"),
+                     InlineKeyboardButton(text=gs(chat.id, "help_3"), callback_data="play_music"),
+                 ],
+                 [
+                     InlineKeyboardButton(text=gs(chat.id, "help_4"), callback_data="bot_music"),
+                     InlineKeyboardButton(text=gs(chat.id, "help_5"), callback_data="extra_music"),
+                 ],
                 ]
             ),
         )
@@ -555,6 +544,58 @@ def Source_about_callback(update, context):
                 parse_mode=ParseMode.MARKDOWN,
                 timeout=60,
                 disable_web_page_preview=True,
+        )
+    elif query.data == "music_admin":
+        query.message.edit_text(
+            text=gs(chat.id, "help_2"),
+            parse_mode=ParseMode.MARKDOWN,
+            disable_web_page_preview=True,
+            reply_markup=InlineKeyboardMakrup(
+                [
+                    [
+                        InlineKeyboardButton(text=gs(chat.id, "back_button"), callback_data="source_"),
+                    ]
+                ]
+            ),
+        )
+    elif query.data == "play_music":
+        query.message.edit_text(
+            text=gs(chat.id, "help_3"),
+            parse_mode=ParseMode.MARKDOWN,
+            disable_web_page_preview=True,
+            reply_markup=InlineKeyboardMarkup(
+                [
+                    [
+                        InlineKeyboardButton(text=gs(chat.id, "back_button"), callback_data="source_"),
+                    ]
+                ]
+            ),
+        )
+    elif query.data == "bot_music":
+        qeury.message.edit_text(
+            text=gs(chat.id, "help_4"),
+            parse_mode=ParseMode.MARKDOWN,
+            disable_web_page_preview=True,
+            reply_markup=InlineKeyboardMarkup(
+                [
+                    [
+                        InlineKeyboardButton(text=gs(chat.id, "back_button"), callback_data="source_"),
+                    ]
+                ]
+            ),
+        )
+    elif query.data == "extra_music":
+        query.message.edit_text(
+            text=gs(chat.id, "help_5"),
+            parse_mode=ParseMode.MARKDOWN,
+            disable_web_page_preview=True,
+            reply_markup=InlineKeyboardMarkup(
+                [
+                    [
+                        InlineKeyboardButton(text=gs(chat.id, "back_button"), callback_data="source_"),
+                    ]
+                ]
+            ),
         )
 
 def get_help(update: Update, context: CallbackContext):
