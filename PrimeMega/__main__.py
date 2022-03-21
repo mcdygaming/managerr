@@ -509,12 +509,12 @@ def Source_about_callback(update, context):
             reply_markup=InlineKeyboardMarkup(
                 [
                  [
-                     InlineKeyboardButton(text=gs(update.effective_chat.id, "admin_button"), callback_data="music_admin"),
-                     InlineKeyboardButton(text=gs(update.effective_chat.id, "play_button"), callback_data="play_music"),
+                     InlineKeyboardButton(text=gs(update.effective_chat.id, "admin_button"), callback_data="music_"),
+                     InlineKeyboardButton(text=gs(update.effective_chat.id, "play_button"), callback_data="play_"),
                  ],
                  [
-                     InlineKeyboardButton(text=gs(update.effective_chat.id, "bot_button"), callback_data="bot_music"),
-                     InlineKeyboardButton(text=gs(update.effective_chat.id, "extra_button"), callback_data="extra_music"),
+                     InlineKeyboardButton(text=gs(update.effective_chat.id, "bot_button"), callback_data="bot_"),
+                     InlineKeyboardButton(text=gs(update.effective_chat.id, "extra_button"), callback_data="extra_"),
                  ],
                  [
                      InlineKeyboardButton(text=gs(update.effective_chat.id, "back_button"), callback_data="prime_"),
@@ -522,7 +522,7 @@ def Source_about_callback(update, context):
                 ]
             ),
         )
-    elif query.data == "music_admin":
+    elif query.data == "music_":
         query.message.edit_text(
             text=gs(update.effective_chat.id, "help_2"),
             parse_mode=ParseMode.MARKDOWN,
@@ -535,7 +535,7 @@ def Source_about_callback(update, context):
                 ]
             ),
         )
-    elif query.data == "play_music":
+    elif query.data == "play_":
         query.message.edit_text(
             text=gs(update.effective_chat.id, "help_3"),
             parse_mode=ParseMode.MARKDOWN,
@@ -548,7 +548,7 @@ def Source_about_callback(update, context):
                 ]
             ),
         )
-    elif query.data == "bot_music":
+    elif query.data == "bot_":
         qeury.message.edit_text(
             text=gs(update.effective_chat.id, "help_4"),
             parse_mode=ParseMode.MARKDOWN,
@@ -561,7 +561,7 @@ def Source_about_callback(update, context):
                 ]
             ),
         )
-    elif query.data == "extra_music":
+    elif query.data == "extra_":
         query.message.edit_text(
             text=gs(update.effective_chat.id, "help_5"),
             parse_mode=ParseMode.MARKDOWN,
