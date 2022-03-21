@@ -516,6 +516,9 @@ def Source_about_callback(update, context):
                      InlineKeyboardButton(text=gs(update.effective_chat.id, "bot_button"), callback_data="bot_music"),
                      InlineKeyboardButton(text=gs(update.effective_chat.id, "extra_button"), callback_data="extra_music"),
                  ],
+                 [
+                     InlineKeyboardButton(text=gs(update.effective_chat.id, "back_button"), callback_data="prime_"),
+                 ],
                 ]
             ),
         )
