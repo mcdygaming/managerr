@@ -354,6 +354,14 @@ MARKDOWN_HELP_TEXT_2: |
     /save test Ini adalah tes markdown. _italics_, *tebal*, kode,
     [URL](example.com) [button](buttonurl:github.com)
     [button2](buttonurl://google.com:same)
+nulis_help: |
+    ──「 Nulis 」──
+
+    Nulis Adalah Module untuk anda yang malas mencatat Tugas sekolah di buku.
+    Cara Menggunakan nya :
+    ❂ /tulis <text>
+    
+    CATATAN : Ini hanya Untuk Orang Yang Malas
 fsub_feds_help: |
     ──「 F-Subs / Feds 」──
     *Paksa Berlangganan:*
