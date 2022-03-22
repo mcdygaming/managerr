@@ -305,8 +305,8 @@ def reply_filter(update, context):
                             text = filt.reply_text
                     else:
                         text = filt.reply_text
-                    if text.startswith("~!") and text.endswith("!~"):
-                        sticker_id = text.replace("~!", "").replace("!~", "")
+                    if (text.startswith("~!") or text.startswith(" ~!")) and (text.endswith("!~") or text.endswith("!~ ")):
+                        sticker_id = text.replace("~!", "").replace("!~", "").replace(" ", "") 
                         try:
                             context.bot.send_sticker(
                                 chat.id,
