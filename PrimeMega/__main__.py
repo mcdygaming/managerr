@@ -522,7 +522,7 @@ def Source_about_callback(update, context):
                 ]
             ),
         )
-    elif query.data == "music":
+    elif query.data == "source_music":
         query.message.edit_text(
             text=gs(update.effective_chat.id, "help_2"),
             parse_mode=ParseMode.MARKDOWN,
@@ -535,7 +535,7 @@ def Source_about_callback(update, context):
                 ]
             ),
         )
-    elif query.data == "play":
+    elif query.data == "source_play":
         query.message.edit_text(
             text=gs(update.effective_chat.id, "help_3"),
             parse_mode=ParseMode.MARKDOWN,
@@ -548,7 +548,7 @@ def Source_about_callback(update, context):
                 ]
             ),
         )
-    elif query.data == "bot":
+    elif query.data == "source_bot":
         qeury.message.edit_text(
             text=gs(update.effective_chat.id, "help_4"),
             parse_mode=ParseMode.MARKDOWN,
@@ -561,7 +561,7 @@ def Source_about_callback(update, context):
                 ]
             ),
         )
-    elif query.data == "extras":
+    elif query.data == "source_extras":
         query.message.edit_text(
             text=gs(update.effective_chat.id, "help_5"),
             parse_mode=ParseMode.MARKDOWN,
