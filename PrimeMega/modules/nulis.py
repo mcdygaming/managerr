@@ -12,7 +12,7 @@ async def writer(event):
     elif event.pattern_match.group(1).strip():
         text = event.text.split(maxsplit=1)[1]
     else:
-        return await event.edit("Berikan Beberapa Teks")
+        return await k.edit("Berikan Beberapa Teks")
     k = await event.reply ("Sedang Memproses..")
     img = Image.open("PrimeMega/resources/bahan/kertas/kertas.jpg")
     draw = ImageDraw.Draw(img)
