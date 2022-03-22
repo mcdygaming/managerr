@@ -7,13 +7,13 @@ from PrimeMega.modules.language import gs
 @register(pattern="^/nulis(?: |$)(.*)")
 async def writer(event):
     if event.reply_to:
+        k = await event.reply ("Sedang Memproses..")
         reply = await event.get_reply_message()
         text = reply.message
     elif event.pattern_match.group(1).strip():
         text = event.text.split(maxsplit=1)[1]
     else:
         return await k.edit("Berikan Beberapa Teks")
-    k = await event.reply ("Sedang Memproses..")
     img = Image.open("PrimeMega/resources/bahan/kertas/kertas.jpg")
     draw = ImageDraw.Draw(img)
     font = ImageFont.truetype("PrimeMega/resources/bahan/font/assfont.ttf", 30)
