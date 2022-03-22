@@ -549,7 +549,7 @@ def Source_about_callback(update, context):
             ),
         )
     elif query.data == "source_bot":
-        qeury.message.edit_text(
+        query.message.edit_text(
             text=gs(update.effective_chat.id, "help_4"),
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
