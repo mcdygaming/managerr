@@ -839,7 +839,6 @@ dispatcher.add_handler(SET_STICKER_HANDLER)
 dispatcher.add_handler(SETCHATPIC_HANDLER)
 dispatcher.add_handler(RMCHATPIC_HANDLER)
 dispatcher.add_handler(SETCHAT_TITLE_HANDLER)
-dispatcher.add_handler(ADMINLIST_HANDLER)
 dispatcher.add_handler(PIN_HANDLER)
 dispatcher.add_handler(UNPIN_HANDLER)
 dispatcher.add_handler(PINNED_HANDLER)
@@ -857,8 +856,7 @@ __command_list__ = [
     "setgpic"
     "delgpic"
     "setgtitle"
-    "adminlist",
-    "admins", 
+    "adminlist", 
     "invitelink", 
     "promote", 
     "fullpromote",
@@ -872,7 +870,6 @@ __handlers__ = [
     SETCHATPIC_HANDLER,
     RMCHATPIC_HANDLER,
     SETCHAT_TITLE_HANDLER,
-    ADMINLIST_HANDLER,
     PIN_HANDLER,
     UNPIN_HANDLER,
     PINNED_HANDLER,
