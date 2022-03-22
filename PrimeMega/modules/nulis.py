@@ -42,11 +42,11 @@ async def writer(event):
     img = Image.open("PrimeMega/resources/bahan/kertas/bahan_1.jpg")
     draw = ImageDraw.Draw(img)
     font = ImageFont.truetype("PrimeMega/resources/bahan/font/font1.ttf", 30)
-    x, y = 150, 140
+    x, y = 531, 347
     lines = text_set(text)
     line_height = font.getsize("hg")[1]
     for line in lines:
-        draw.text((x, y), line, fill=(1, 22, 55), font=font)
+        draw.text((x, y), line, fill=(25, 22, 55), font=font)
         y = y + line_height - 5
     file = "toni.jpg"
     img.save(file)
