@@ -509,7 +509,7 @@ def Source_about_callback(update, context):
             reply_markup=InlineKeyboardMarkup(
               [
                  [
-                     InlineKeyboardButton(text=gs(chat.id, "admin_button"), callback_data="source_music"),
+                     InlineKeyboardButton(text=gs(chat.id, "admin_button"), callback_data="source_memeks"),
                      InlineKeyboardButton(text=gs(chat.id, "play_button"), callback_data="source_play"),
                  ],
                  [
@@ -522,7 +522,7 @@ def Source_about_callback(update, context):
                  ]
              ),
          )
-    elif query.data == "source_music":
+    elif query.data == "source_memeks":
         query.message.edit_text(
             text=gs(chat.id, "help_2"),
             parse_mode=ParseMode.MARKDOWN,
