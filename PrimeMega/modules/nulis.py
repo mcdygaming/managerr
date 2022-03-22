@@ -41,7 +41,7 @@ async def writer(event):
         return await k.edit("Berikan Beberapa Teks")
     img = Image.open("PrimeMega/resources/bahan/kertas/bahan_1.jpg")
     draw = ImageDraw.Draw(img)
-    font = ImageFont.truetype("PrimeMega/resources/bahan/font/assfont.ttf", 30)
+    font = ImageFont.truetype("PrimeMega/resources/bahan/font/font1.ttf", 30)
     x, y = 150, 140
     lines = text_set(text)
     line_height = font.getsize("hg")[1]
