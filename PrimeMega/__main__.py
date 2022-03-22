@@ -500,31 +500,31 @@ def prime_about_callback(update, context):
 
 def Source_about_callback(update, context):
     query = update.callback_query
-    chat = update.effective_message
+    chat = update.effective_chat
     if query.data == "source_":
         query.message.edit_text(
-            text=gs(update.effective_chat.id, "help_1"),
+            text=gs(chat.id, "help_1"),
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
                 [
                  [
-                     InlineKeyboardButton(text=gs(update.effective_chat.id, "admin_button"), callback_data="source_music"),
-                     InlineKeyboardButton(text=gs(update.effective_chat.id, "play_button"), callback_data="source_play"),
+                     InlineKeyboardButton(text=gs(chat.id, "admin_button"), callback_data="source_music"),
+                     InlineKeyboardButton(text=gs(chat.id, "play_button"), callback_data="source_play"),
                  ],
                  [
-                     InlineKeyboardButton(text=gs(update.effective_chat.id, "bot_button"), callback_data="source_bot"),
-                     InlineKeyboardButton(text=gs(update.effective_chat.id, "extra_button"), callback_data="source_extras"),
+                     InlineKeyboardButton(text=gs(chat.id, "bot_button"), callback_data="source_bot"),
+                     InlineKeyboardButton(text=gs(chat.id, "extra_button"), callback_data="source_extras"),
                  ],
                  [
-                     InlineKeyboardButton(text=gs(update.effective_chat.id, "back_button"), callback_data="prime_"),
+                     InlineKeyboardButton(text=gs(chat.id, "back_button"), callback_data="prime_"),
                  ],
                 ]
             ),
         )
     elif query.data == "source_music":
         query.message.edit_text(
-            text=gs(update.effective_chat.id, "help_2"),
+            text=gs(chat.id, "help_2"),
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMakrup(
@@ -537,7 +537,7 @@ def Source_about_callback(update, context):
         )
     elif query.data == "source_play":
         query.message.edit_text(
-            text=gs(update.effective_chat.id, "help_3"),
+            text=gs(chat.id, "help_3"),
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
@@ -550,7 +550,7 @@ def Source_about_callback(update, context):
         )
     elif query.data == "source_bot":
         query.message.edit_text(
-            text=gs(update.effective_chat.id, "help_4"),
+            text=gs(chat.id, "help_4"),
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
@@ -563,7 +563,7 @@ def Source_about_callback(update, context):
         )
     elif query.data == "source_extras":
         query.message.edit_text(
-            text=gs(update.effective_chat.id, "help_5"),
+            text=gs(chat.id, "help_5"),
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
