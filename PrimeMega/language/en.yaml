@@ -335,6 +335,13 @@ extras_help: |
     ❂ /video or /vsong (query): download video from youtube
     ❂ /music or /song (query): download song from yt servers. (API BASED)
     ❂ /lyrics (song name) : This plugin searches for song lyrics with song name.
+nulis_help: |
+    ──「 Write 」──
+    Writing is a module for those of you who are lazy to record school assignments in books.
+    How to use it:
+    /nulis <text>
+
+    NOTE: This is only for lazy people
 MARKDOWN_HELP: |
     ──「 Markdown Help 」──
     Markdown is a very powerful formatting tool supported by telegram. {dispatcher.bot.first_name} has some enhancements, to make sure that \
