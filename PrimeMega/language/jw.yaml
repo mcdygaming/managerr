@@ -330,6 +330,13 @@ extras_help: |
     ❂ /video atau /vsong (permintaan): download video saka youtube
     ❂ /music atau /song (query): download lagu saka yt server. (API BASED)
     ❂ /lyrics (nama lagu): Plugin iki nggoleki lirik lagu kanthi jeneng lagu.
+nulis_help: |
+    ──「 Tulis 」──
+    Nulis minangka modul kanggo sampeyan sing males ngrekam tugas sekolah ing buku.
+    Cara nggunakake:
+    ❂ /nulis <text>
+    
+    CATETAN: Iki mung kanggo wong kesed
 MARKDOWN_HELP: |
     ──「 Bantuan Markdown 」──
     Markdown minangka alat format sing kuat banget sing didhukung telegram. {dispatcher.bot.first_name} duwe sawetara dandan, kanggo mesthekake yen \
