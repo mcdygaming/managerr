@@ -180,8 +180,15 @@ def get(update, context, notename, show_none=True, no_format=False):
                         chat_id,
                         text,
                         reply_to_message_id=reply_id,
-                        parse_mode=parseMode,
                         disable_web_page_preview=True,
+                        parse_mode=parseMode,
+                        reply_markup=keyboard,
+                    )
+                elif ENUM_FUNC_MAP[note.msgtype] == dispatcher.bot.send_sticker:
+                    ENUM_FUNC_MAP[note.msgtype](
+                        chat_id,
+                        note.file,
+                        reply_to_message_id=reply_id,
                         reply_markup=keyboard,
                     )
                 else:
@@ -191,7 +198,6 @@ def get(update, context, notename, show_none=True, no_format=False):
                         caption=text,
                         reply_to_message_id=reply_id,
                         parse_mode=parseMode,
-                        disable_web_page_preview=True,
                         reply_markup=keyboard,
                     )
 
