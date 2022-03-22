@@ -526,7 +526,7 @@ def Source_about_callback(update, context):
         query.message.edit_text(
             text=gs(chat.id, "help_2"),
             parse_mode=ParseMode.MARKDOWN,
-            reply_markup=InlineKeyboardMakrup(
+            reply_markup=InlineKeyboardMarkup(
                 [
                     [
                         InlineKeyboardButton(text=gs(chat.id, "back_button"), callback_data="source_")
