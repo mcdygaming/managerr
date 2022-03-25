@@ -215,7 +215,7 @@ def start(update: Update, context: CallbackContext):
                         ],
                         [
                             InlineKeyboardButton(text=gs(chat.id, "help_button"), callback_data="help_back"),
-                            InlineKeyboardButton(text=gs(chat.id, "inline_button"), switch_inline_query_current_chat=""),
+                            InlineKeyboardButton(text="Music", callback_data="source_"),
                         ],
                         [
                             InlineKeyboardButton(
@@ -399,12 +399,9 @@ def prime_about_callback(update, context):
                         InlineKeyboardButton(text=gs(chat.id, "support_chat_link_button"), callback_data="prime_support"),
                         InlineKeyboardButton(text="Credits", callback_data="prime_credit"),
                     ],
-                 [
-                    InlineKeyboardButton(text="Musicplayer", callback_data="source_"),
-                 ],
-                 [
-                    InlineKeyboardButton(text=gs(chat.id, "back_button"), callback_data="prime_back"),
-                 ]
+                    [
+                        InlineKeyboardButton(text=gs(chat.id, "back_button"), callback_data="prime_back"),
+                    ]
                 ]
             ),
         )
