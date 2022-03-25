@@ -421,7 +421,7 @@ def prime_about_callback(update, context):
                         ],
                         [
                             InlineKeyboardButton(text=gs(chat.id, "help_button"), callback_data="help_back"),
-                            InlineKeyboardButton(text=gs(chat.id, "inline_button"), switch_inline_query_current_chat=""),
+                            InlineKeyboardButton(text="Music", callback_data="source_"),
                         ],
                         [
                             InlineKeyboardButton(text=gs(chat.id, "add_bot_to_group_button"), url="t.me/PrimeMegaBot?startgroup=new"),
