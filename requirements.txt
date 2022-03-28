@@ -44,7 +44,8 @@ ujson
 pretty_errors
 pygithub
 TgCrypto
-pyrogram
+Pyrogram
+pyromod
 PyDictionary
 yt-dlp
 youtube_search_python
