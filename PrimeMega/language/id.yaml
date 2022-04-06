@@ -78,7 +78,8 @@ admin_button: "Perintah Admin"
 bot_button: "Perintah Bot"
 extra_button: "Perintah Ekstra"
 help_1: |
-    "Klik tombol di bawah untuk informasi lebih lanjut. Jika Anda menghadapi masalah dalam perintah, Anda dapat menghubungi pemilik bot saya atau bertanya di obrolan dukungan.\n\nSemua perintah dapat digunakan dengan:/"
+    "Klik tombol di bawah untuk informasi lebih lanjut. Jika Anda menghadapi masalah dalam perintah, Anda dapat menghubungi pemilik bot saya atau bertanya di obrolan dukungan.
+    Semua perintah dapat digunakan dengan:/"
 help_2: |
     *✺ Perintah Admin *
     /pause atau /cpause - Menjeda musik yang sedang diputar.
@@ -112,10 +113,8 @@ help_5: |
    *✺ Perintah Ekstra *
    /start - Mulai Bot Musik.
    /help - Dapatkan Menu Helper Perintah dengan penjelasan rinci tentang perintah.
-   
    <u>**Setelan Grup:*</u>
    /setting - Dapatkan pengaturan grup lengkap dengan tombol sebaris
-   
    **Opsi di Pengaturan:**
    1️⃣ Anda dapat mengatur **Kualitas Audio** yang ingin Anda streaming di obrolan suara.
    2️⃣ Anda dapat mengatur **Kualitas Video** yang ingin Anda streaming di obrolan suara.
@@ -124,7 +123,6 @@ help_5: |
    5️⃣ **Command Clean** : Saat diaktifkan, Bot akan segera menghapus perintah yang dijalankannya (/play, /pause, /shuffle, /stop dll).
    6️⃣ **Pengaturan Putar:**
    /playmode - Dapatkan panel pengaturan pemutaran lengkap dengan tombol di mana Anda dapat mengatur pengaturan pemutaran grup Anda.
-   
    <u>Opsi dalam mode putar:</u>
    1️⃣ **Mode Pencarian** [Langsung atau Sebaris] - Mengubah mode pencarian Anda saat Anda memberikan mode /play.
    2️⃣ **Perintah Admin** [Semua Orang atau Admin] - Jika semua orang, siapa pun yang hadir di grup Anda akan dapat menggunakan perintah admin (seperti /skip, /stop dll)
