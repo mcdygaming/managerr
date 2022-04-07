@@ -23,16 +23,16 @@ from PrimeMega.modules.log_channel import gloggable
  
 @user_admin_no_reply
 @gloggable
-def kukirm(update: Update, context: CallbackContext) -> str:
+def primerm(update: Update, context: CallbackContext) -> str:
     query: Optional[CallbackQuery] = update.callback_query
     user: Optional[User] = update.effective_user
     match = re.match(r"rm_chat\((.+?)\)", query.data)
     if match:
         user_id = match.group(1)
         chat: Optional[Chat] = update.effective_chat
-        is_kuki = sql.rem_kuki(chat.id)
-        if is_kuki:
-            is_kuki = sql.rem_kuki(user_id)
+        is_prime = sql.rem_prime(chat.id)
+        if is_prime:
+            is_prime = sql.rem_prime(user_id)
             return (
                 f"<b>{html.escape(chat.title)}:</b>\n"
                 f"AI_DISABLED\n"
@@ -48,16 +48,16 @@ def kukirm(update: Update, context: CallbackContext) -> str:
 
 @user_admin_no_reply
 @gloggable
-def kukiadd(update: Update, context: CallbackContext) -> str:
+def primeadd(update: Update, context: CallbackContext) -> str:
     query: Optional[CallbackQuery] = update.callback_query
     user: Optional[User] = update.effective_user
     match = re.match(r"add_chat\((.+?)\)", query.data)
     if match:
         user_id = match.group(1)
         chat: Optional[Chat] = update.effective_chat
-        is_kuki = sql.set_kuki(chat.id)
-        if is_kuki:
-            is_kuki = sql.set_kuki(user_id)
+        is_prime = sql.set_prime(chat.id)
+        if is_prime:
+            is_prime = sql.set_prime(user_id)
             return (
                 f"<b>{html.escape(chat.title)}:</b>\n"
                 f"AI_ENABLE\n"
@@ -73,7 +73,7 @@ def kukiadd(update: Update, context: CallbackContext) -> str:
 
 @user_admin
 @gloggable
-def kuki(update: Update, context: CallbackContext):
+def prime(update: Update, context: CallbackContext):
     user = update.effective_user
     message = update.effective_message
     msg = "Choose an option"
@@ -91,9 +91,9 @@ def kuki(update: Update, context: CallbackContext):
         parse_mode=ParseMode.HTML,
     )
 
-def kuki_message(context: CallbackContext, message):
+def prime_message(context: CallbackContext, message):
     reply_message = message.reply_to_message
-    if message.text.lower() == "kuki":
+    if message.text.lower() == "prime":
         return True
     if reply_message:
         if reply_message.from_user.id == context.bot.get_me().id:
@@ -106,23 +106,23 @@ def chatbot(update: Update, context: CallbackContext):
     message = update.effective_message
     chat_id = update.effective_chat.id
     bot = context.bot
-    is_kuki = sql.is_kuki(chat_id)
-    if not is_kuki:
+    is_prime = sql.is_prime(chat_id)
+    if not is_prime:
         return
 	
     if message.text and not message.document:
-        if not kuki_message(context, message):
+        if not prime_message(context, message):
             return
         Message = message.text
         bot.send_chat_action(chat_id, action="typing")
-        kukiurl = requests.get('https://www.kukiapi.xyz/api/apikey=KUKIg76Fg4EIo/PrimeMega/@Bukan_guudlooking/message='+Message)
-        Kuki = json.loads(kukiurl.text)
-        kuki = Kuki['reply']
+        primeurl = requests.get('https://www.kukiapi.xyz/api/apikey=KUKIg76Fg4EIo/PrimeMega/@Bukan_guudlooking/message='+Message)
+        Prime = json.loads(primeurl.text)
+        prime = Prime['reply']
         sleep(0.3)
-        message.reply_text(kuki, timeout=60)
+        message.reply_text(prime, timeout=60)
 
 def list_all_chats(update: Update, context: CallbackContext):
-    chats = sql.get_all_kuki_chats()
+    chats = sql.get_all_prime_chats()
     text = "<b>Prime Mega Enabled Chats</b>\n"
     for chat in chats:
         try:
@@ -130,7 +130,7 @@ def list_all_chats(update: Update, context: CallbackContext):
             name = x.title or x.first_name
             text += f"• <code>{name}</code>\n"
         except (BadRequest, Unauthorized):
-            sql.rem_kuki(*chat)
+            sql.rem_prime(*chat)
         except RetryAfter as e:
             sleep(e.retry_after)
     update.effective_message.reply_text(text, parse_mode="HTML")
@@ -146,9 +146,9 @@ Chatbot utilizes the Prime's api which allows Prime to talk and provide a more i
 __mod_name__ = "ChatBot"
 
 
-CHATBOTK_HANDLER = CommandHandler("chatbot", kuki, run_async=True)
-ADD_CHAT_HANDLER = CallbackQueryHandler(kukiadd, pattern=r"add_chat", run_async=True)
-RM_CHAT_HANDLER = CallbackQueryHandler(kukirm, pattern=r"rm_chat", run_async=True)
+CHATBOTK_HANDLER = CommandHandler("chatbot", prime, run_async=True)
+ADD_CHAT_HANDLER = CallbackQueryHandler(primeadd, pattern=r"add_chat", run_async=True)
+RM_CHAT_HANDLER = CallbackQueryHandler(primerm, pattern=r"rm_chat", run_async=True)
 CHATBOT_HANDLER = MessageHandler(
     Filters.text & (~Filters.regex(r"^#[^\s]+") & ~Filters.regex(r"^!")
                     & ~Filters.regex(r"^\/")), chatbot, run_async=True)
