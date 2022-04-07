@@ -128,6 +128,11 @@ help_5: |
    2️⃣ **Perintah Admin** [Semua Orang atau Admin] - Jika semua orang, siapa pun yang hadir di grup Anda akan dapat menggunakan perintah admin (seperti /skip, /stop dll)
    3️⃣ **Tipe Putar** [Semua Orang atau Admin] - Jika admin, hanya admin yang ada di grup yang dapat memutar musik di obrolan suara.
 
+chatbot: |
+   ➢ `/chatbot on`*:* Mengaktifkan mode Chatbot dalam obrolan.
+   ➢ `/chatbot off`*:* Menonaktifkan mode Chatbot dalam obrolan.
+   ➢ `/chatbot EN `: Mengaktifkan chatbot berbahasa Inggris saja.
+
 # Group Help Text
 group_help_text: "Hubungi saya di PM untuk mendapatkan daftar kemungkinan perintah."
 group_help_modules_text: "Hubungi saya di PM untuk mendapatkan bantuan *{}*"
