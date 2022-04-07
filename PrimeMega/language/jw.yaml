@@ -130,6 +130,11 @@ help_5: |
    2️⃣ **Prentah Admin** [Kabeh utawa Admin] - Yen kabeh wong, sapa wae sing ana ing grup sampeyan bakal bisa nggunakake perintah admin (kaya /skip, /stop etc)
    3️⃣ **Jenis Puter** [Kabeh utawa Admin] - Yen admin, mung admin sing ana ing grup sing bisa muter musik ing obrolan swara.
 
+chatbot: |
+   ➢ `/chatbot on`*:* Ngaktifake mode Chatbot ing obrolan.
+   ➢ `/chatbot off`*:* Mateni mode Chatbot ing obrolan.
+   ➢ `/chatbot EN `: Ngaktifake chatbot Inggris mung.
+
 # Group Help Text
 group_help_text: "Telpon kula ing PM kanggo dhaptar pesenan bisa."
 group_help_modules_text: "Telpon aku ing PM kanggo bantuan *{}*"
