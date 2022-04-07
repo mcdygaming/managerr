@@ -8,7 +8,7 @@ from PrimeMega.utils.pluginhelper import admins_only, edit_or_reply
 from PrimeMega import pbot as Prime, arq, BOT_ID
 from PrimeMega.modules.language import gs
 
-url = "https://acobot-brainshop-ai-v1.p.rapidapi.com/get"
+url = "https://apitede.herokuapp.com/api/chatbot?message={message}"
 
 translator = google_translator()
 
