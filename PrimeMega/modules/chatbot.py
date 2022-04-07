@@ -77,7 +77,7 @@ async def hmm(_, message):
         await message.reply_text("I only recognize `/chatbot on` and /chatbot `off only`")
 
 
-@PrimeMega.on_message(
+@Prime.on_message(
     filters.text
     & filters.reply
     & ~filters.bot
