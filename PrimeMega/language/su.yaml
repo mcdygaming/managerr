@@ -130,6 +130,11 @@ help_5: |
    2️⃣ **Paréntah Admin** [Sadayana atanapi Admin] - Upami sadayana, saha waé anu aya di grup anjeun tiasa nganggo paréntah admin (sapertos / skip, /stop jsb)
    3️⃣ **Jenis Puter** [Sadayana atanapi Admin] - Upami admin, ngan admin anu aya di grup tiasa maénkeun musik dina obrolan sora.
 
+chatbot: |
+   ➢ `/chatbot on`*:* Aktipkeun mode Chatbot dina obrolan.
+   ➢ `/chatbot off`*:* Nonaktipkeun mode Chatbot dina obrolan.
+   ➢ `/chatbot EN `: Ngaktifkeun chatbot wungkul dina basa Inggris.
+
 # Group Help Text
 group_help_text: "Telepon kuring di PM pikeun daptar mungkin pesenan."
 group_help_modules_text: "Telepon kuring di PM pikeun pitulung *{}*"
