@@ -36,15 +36,6 @@ def get_user(message: Message, text: str) -> [int, str, None]:
     return user_s, reason_
 
 
-async def is_admin(event, user):
-    try:
-        sed = await event.client.get_permissions(event.chat_id, user)
-        is_mod = bool(sed.is_admin)
-    except:
-        is_mod = False
-    return is_mod
-
-
 def get_readable_time(seconds: int) -> int:
     count = 0
     ping_time = ""
@@ -199,7 +190,7 @@ async def edit_or_reply(message, text, parse_mode="md"):
 
 
 async def runcmd(cmd: str) -> Tuple[str, str, int, int]:
-    """run command in terminal"""
+    """ run command in terminal """
     args = shlex.split(cmd)
     process = await asyncio.create_subprocess_exec(
         *args, stdout=asyncio.subprocess.PIPE, stderr=asyncio.subprocess.PIPE
@@ -249,25 +240,6 @@ async def convert_to_image(message, client) -> [None, str]:
     return final_path
 
 
-async def convert_seconds_to_minutes(seconds: int):
-    seconds = int(seconds)
-    seconds = seconds % (24 * 3600)
-    seconds %= 3600
-    minutes = seconds // 60
-    seconds %= 60
-    return "%02d:%02d" % (minutes, seconds)
-
-
-async def fetch(url):
-    async with aiohttp.ClientSession() as session:
-        async with session.get(url) as resp:
-            try:
-                data = await resp.json()
-            except Exception:
-                data = await resp.text()
-    return data
-
-
 def get_text(message: Message) -> [None, str]:
     """Extract Text From Commands"""
     text_to_return = message.text
@@ -309,11 +281,13 @@ async def get_administrators(chat: Chat) -> List[User]:
 
     if _get:
         return _get
-    set(
-        chat.id,
-        [member.user for member in await chat.get_members(filter="administrators")],
-    )
-    return await get_administrators(chat)
+    else:
+        set(
+            chat.id,
+            [member.user for member in await chat.get_members(filter="administrators")],
+        )
+        return await get_administrators(chat)
+
 
 
 def admins_only(func: Callable) -> Coroutine:
@@ -328,7 +302,6 @@ def admins_only(func: Callable) -> Coroutine:
     return wrapper
 
 
-# @Mr_Dark_Prince
 def capture_err(func):
     @wraps(func)
     async def capture(client, message, *args, **kwargs):
@@ -350,7 +323,7 @@ def capture_err(func):
                 ),
             )
             for x in error_feedback:
-                await kp.send_message(SUPPORT_CHAT, x)
+                await pbot.send_message(SUPPORT_CHAT, x)
             raise err
 
     return capture
@@ -361,7 +334,7 @@ def capture_err(func):
 
 async def member_permissions(chat_id, user_id):
     perms = []
-    member = await kp.get_chat_member(chat_id, user_id)
+    member = await pbot.get_chat_member(chat_id, user_id)
     if member.can_post_messages:
         perms.append("can_post_messages")
     if member.can_edit_messages:
@@ -379,3 +352,75 @@ async def member_permissions(chat_id, user_id):
     if member.can_pin_messages:
         perms.append("can_pin_messages")
     return perms
+
+
+# URL LOCK
+
+
+def get_url(message_1: Message) -> Union[str, None]:
+    messages = [message_1]
+
+    if message_1.reply_to_message:
+        messages.append(message_1.reply_to_message)
+
+    text = ""
+    offset = None
+    length = None
+
+    for message in messages:
+        if offset:
+            break
+
+        if message.entities:
+            for entity in message.entities:
+                if entity.type == "url":
+                    text = message.text or message.caption
+                    offset, length = entity.offset, entity.length
+                    break
+
+    if offset in (None,):
+        return None
+
+    return text[offset : offset + length]
+
+
+async def fetch(url):
+    async with aiohttp.ClientSession() as session:
+        async with session.get(url) as resp:
+            try:
+                data = await resp.json()
+            except Exception:
+                data = await resp.text()
+    return data
+
+
+async def convert_seconds_to_minutes(seconds: int):
+    seconds = int(seconds)
+    seconds = seconds % (24 * 3600)
+    seconds %= 3600
+    minutes = seconds // 60
+    seconds %= 60
+    return "%02d:%02d" % (minutes, seconds)
+
+
+async def json_object_prettify(objecc):
+    dicc = objecc.__dict__
+    output = ""
+    for key, value in dicc.items():
+        if key == "pinned_message" or key == "photo" or key == "_" or key == "_client":
+            continue
+        output += f"**{key}:** `{value}`\n"
+    return output
+
+
+async def json_prettify(data):
+    output = ""
+    try:
+        for key, value in data.items():
+            output += f"**{key}:** `{value}`\n"
+    except Exception:
+        for datas in data:
+            for key, value in datas.items():
+                output += f"**{key}:** `{value}`\n"
+            output += "------------------------\n"
+    return output
