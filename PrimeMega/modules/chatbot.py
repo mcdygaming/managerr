@@ -3,8 +3,8 @@ import emoji
 import aiohttp
 from googletrans import Translator as google_translator
 from pyrogram import filters
-from PrimeMega.helper_extra.aichat import add_chat, get_session, remove_chat
-from PrimeMega.pyrogramee.pluginshelper import admins_only, edit_or_reply
+from PrimeMega.ex_plugins.chatbot import add_chat, get_session, remove_chat
+from PrimeMega.utils.pluginshelper import admins_only, edit_or_reply
 from PrimeMega import pbot as Prime, arq, BOT_ID
 from PrimeMega.modules.language import gs
 
