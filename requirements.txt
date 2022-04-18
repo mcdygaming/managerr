@@ -97,3 +97,4 @@ pyYAML
 base58
 pybase64
 pycryptodome
+sibylsystem
