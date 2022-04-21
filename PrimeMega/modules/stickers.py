@@ -5,13 +5,15 @@ import math
 import requests
 import cloudscraper
 import urllib.request as urllib
+from cloudscraper import CloudScraper
+from urllib.parse import quote as urlquote
 from PIL import Image
 from html import escape
 from bs4 import BeautifulSoup as bs
 
 from telegram import ParseMode, InlineKeyboardMarkup, InlineKeyboardButton
 from telegram import TelegramError, Update
-from telegram.ext import CallbackContext
+from telegram.ext import CallbackContext, CallbackQueryHandler
 from telegram.utils.helpers import mention_html
 
 from PrimeMega import dispatcher
@@ -20,6 +22,7 @@ from PrimeMega.modules.language import gs
 
 combot_stickers_url = "https://combot.org/telegram/stickers?q="
 
+scraper = CloudScraper()
 
 def stickerid(update: Update, context: CallbackContext):
     msg = update.effective_message
@@ -463,26 +466,69 @@ def getsticker(update: Update, context: CallbackContext):
         )
 
 
+def get_cbs_data(query, page, user_id):
+    # returns (text, buttons)
+    text = scraper.get(
+        f"{combot_stickers_url}{urlquote(query)}&page={page}").text
+    soup = bs(text, "lxml")
+    div = soup.find("div", class_="page__container")
+    packs = div.find_all("a", class_="sticker-pack__btn")
+    titles = div.find_all("div", "sticker-pack__title")
+    has_prev_page = has_next_page = None
+    highlighted_page = div.find("a", class_="pagination__link is-active")
+    if highlighted_page is not None and user_id is not None:
+        highlighted_page = highlighted_page.parent
+        has_prev_page = highlighted_page.previous_sibling.previous_sibling is not None
+        has_next_page = highlighted_page.next_sibling.next_sibling is not None
+    buttons = []
+    if has_prev_page:
+        buttons.append(InlineKeyboardButton(
+            text="⬅️", callback_data=f"cbs_{page - 1}_{user_id}"))
+    if has_next_page:
+        buttons.append(InlineKeyboardButton(
+            text="➡️", callback_data=f"cbs_{page + 1}_{user_id}"))
+    buttons = InlineKeyboardMarkup([buttons]) if buttons else None
+    text = f"Stickers for <code>{escape(query)}</code>:\nPage: {page}"
+    if packs and titles:
+        for pack, title in zip(packs, titles):
+            link = pack["href"]
+            text += f"\n• <a href='{link}'>{escape(title.get_text())}</a>"
+    elif page == 1:
+        text = "No results found, try a different term"
+    else:
+        text += "\n\nInterestingly, there's nothing here."
+    return text, buttons
+
+
 def cb_sticker(update: Update, context: CallbackContext):
     msg = update.effective_message
-    split = msg.text.split(" ", 1)
-    if len(split) == 1:
+    query = " ".join(msg.text.split()[1:])
+    if not query:
         msg.reply_text("Provide some name to search for pack.")
         return
-
-    scraper = cloudscraper.create_scraper()
-    text = scraper.get(combot_stickers_url + split[1]).text
-    soup = bs(text, "lxml")
-    results = soup.find_all("a", {"class": "sticker-pack__btn"})
-    titles = soup.find_all("div", "sticker-pack__title")
-    if not results:
-        msg.reply_text("No results found :(.")
+    if len(query) > 50:
+        msg.reply_text("Provide a search query under 50 characters")
         return
-    reply = f"Stickers for *{split[1]}*:"
-    for result, title in zip(results, titles):
-        link = result["href"]
-        reply += f"\n• [{title.get_text()}]({link})"
-    msg.reply_text(reply, parse_mode=ParseMode.MARKDOWN)
+    if msg.from_user:
+        user_id = msg.from_user.id
+    else:
+        user_id = None
+    text, buttons = get_cbs_data(query, 1, user_id)
+    msg.reply_text(text, parse_mode=ParseMode.HTML, reply_markup=buttons)
+
+
+def cbs_callback(update: Update, context: CallbackContext):
+    query = update.callback_query
+    _, page, user_id = query.data.split("_", 2)
+    if int(user_id) != query.from_user.id:
+        query.answer("Not for you", cache_time=60 * 60)
+        return
+    search_query = query.message.text.split(
+        "\n", 1)[0].split(maxsplit=2)[2][:-1]
+    text, buttons = get_cbs_data(search_query, int(page), query.from_user.id)
+    query.edit_message_text(
+        text, parse_mode=ParseMode.HTML, reply_markup=buttons)
+    query.answer()
 
 
 def getsticker(update: Update, context: CallbackContext):
@@ -523,8 +569,10 @@ GETSTICKER_HANDLER = DisableAbleCommandHandler("getsticker", getsticker, run_asy
 KANG_HANDLER = DisableAbleCommandHandler("kang", kang, pass_args=True, run_async=True)
 DEL_HANDLER = DisableAbleCommandHandler("delsticker", delsticker, run_async=True)
 STICKERS_HANDLER = DisableAbleCommandHandler("stickers", cb_sticker, run_async=True)
+CBSCALLBACK_HANDLER = CallbackQueryHandler(cbs_callback, pattern="cbs_", run_async=True)
 
 dispatcher.add_handler(STICKERS_HANDLER)
+dispatcher.add_handler(CBSCALLBACK_HANDLER)
 dispatcher.add_handler(STICKERID_HANDLER)
 dispatcher.add_handler(GETSTICKER_HANDLER)
 dispatcher.add_handler(KANG_HANDLER)
