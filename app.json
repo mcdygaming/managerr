@@ -14,7 +14,7 @@
    "addons": [
           {
          "options": {
-            "version": "13"
+            "version": "12"
          },
          "plan": "heroku-postgresql"
       }
@@ -71,7 +71,10 @@
          "description": "username of your bot without the @",
          "value": "PrimeMegaBot"
       },
-
+      "BOT_NAME": {
+         "description": "name of your bot",
+         "value": "Prime Mega"
+      },
       "BOT_ID": {
          "description": "to get your bot_id using other bot or userbot",
          "value": ""
@@ -100,9 +103,14 @@
         "required": false
      },
      "EVENT_LOGS": {
-         "description": "Event logs channel to note down important bot level events, recommend to make this public. ex: '-123456'",
+         "description": "Event logs channel to note down important bot level events, recommend to make this public. ex: '-100'",
          "required": true,
          "value": "-1001376025003"
+      },
+      "ERROR_LOGS": {
+         "description": "error logs channel to note down important bot errors events, make this public/private. ex: '-100'",
+         "required": true,
+         "value": ""
       },
       "JOIN_LOGGER": {
          "description": "A channel where bot will print who added it to what group, useful during debugging or spam handling.",
@@ -131,7 +139,7 @@
          "required": false,
          "value": ""
      },
-        "ARQ_API": {
+        "ARQ_API_KEY": {
             "description": "Get this from @ARQRobot.",
             "required": true
         },
@@ -201,7 +209,7 @@
       "DONATION_LINK": {
          "description": "Optional: link where you would like to receive donations. If you are a noob, better leave it linking to paul",
          "required": false,
-         "value": ""
+         "value": "https://www.paypal.me/PaulSonOfLars"
       },
       "DEL_CMDS": {
          "description": "Set this to True if you want to delete command messages from users who don't have the perms to run that command.",
