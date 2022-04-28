@@ -44,6 +44,7 @@ class Config(object):
     BOT_USERNAME = "PrimeMegaBot"
     BOT_ID = "2109887867"
     OPENWEATHERMAP_ID = "22322"
+    SIBYL_KEY = "1423479724:fnyIAV276tincXOQ1GkNr6NZ7g1yNOo245Meq8sk-N4wSOFGZHrefgn4jMaPtNYS"
     
 
     # OPTIONAL
