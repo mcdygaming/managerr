@@ -43,6 +43,7 @@ class Config(object):
     BOT_NAME = "Prime Mega"
     BOT_USERNAME = "PrimeMegaBot"
     BOT_ID = "2109887867"
+    OPENWEATHERMAP_ID = "22322"
     
 
     # OPTIONAL
