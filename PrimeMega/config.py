@@ -36,7 +36,7 @@ class Config(object):
     URL = None
     SPAMWATCH_API = ""  # go to support.spamwat.ch to get key
     SPAMWATCH_SUPPORT_CHAT = "@SpamWatchSupport"
-    MONGO_URI = "mongo+srv"
+    MONGO_DB_URI = "mongo+srv"
     ARQ_API = ""
     ARQ_API_KEY = ""
     ARQ_API_URL = ""
