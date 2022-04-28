@@ -6,7 +6,7 @@ gtts
 beautifulsoup4
 requests
 python-telegram-bot==13.11.0
-SQLAlchemy==1.4.35
+SQLAlchemy==1.4.36
 psycopg2-binary
 feedparser
 faker
@@ -44,7 +44,7 @@ ujson
 pretty_errors
 pygithub
 TgCrypto
-pyrogram==1.4.12
+pyrogram==1.4.16
 pyromod
 PyDictionary
 yt-dlp
