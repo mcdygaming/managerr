@@ -36,6 +36,14 @@ class Config(object):
     URL = None
     SPAMWATCH_API = ""  # go to support.spamwat.ch to get key
     SPAMWATCH_SUPPORT_CHAT = "@SpamWatchSupport"
+    MONGO_URI = "mongo+srv"
+    ARQ_API = ""
+    ARQ_API_KEY = ""
+    ARQ_API_URL = ""
+    BOT_NAME = "Prime Mega"
+    BOT_USERNAME = "PrimeMegaBot
+    BOT_ID = "2109887867"
+    
 
     # OPTIONAL
     ##List of id's -  (not usernames) for users which have sudo access to the bot.
@@ -57,7 +65,6 @@ class Config(object):
     )
     BAN_STICKER = ""  # banhammer marie sticker id, the bot will send this sticker before banning or kicking a user in chat.
     ALLOW_EXCL = True  # Allow ! commands as well as / (Leave this to true so that blacklist can work)
-    ALLOW_CHATS = None
     CASH_API_KEY = (
         "awoo"  # Get your API key from https://www.alphavantage.co/support/#api-key
     )
@@ -66,8 +73,16 @@ class Config(object):
         "awoo"  # For wallpapers, get one from https://wall.alphacoders.com/api.php
     )
     AI_API_KEY = "awoo"  # For chatbot, get one from https://coffeehouse.intellivoid.net/dashboard
+    HEROKU_API_KEY = "YES"
+    REM_BG_API_KEY = "yahoo"
+    LASTFM_API_KEY = "yeah"
+    CF_API_KEY = "jk"
+    HEROKU_APP_NAME = "siap"
     BL_CHATS = []  # List of groups that you want blacklisted.
     SPAMMERS = None
+    ALLOW_CHATS = None
+    MONGO_DB = "Prime"
+    TEMP_DOWNLOAD_DIRECTORY = "./"
 
 
 class Production(Config):
