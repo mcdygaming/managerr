@@ -41,7 +41,7 @@ class Config(object):
     ARQ_API_KEY = ""
     ARQ_API_URL = ""
     BOT_NAME = "Prime Mega"
-    BOT_USERNAME = "PrimeMegaBot
+    BOT_USERNAME = "PrimeMegaBot"
     BOT_ID = "2109887867"
     
 
