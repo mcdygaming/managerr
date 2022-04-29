@@ -45,7 +45,6 @@ pretty_errors
 pygithub
 TgCrypto
 pyrogram==1.4.16
-pyromod
 PyDictionary
 yt-dlp
 youtube_search_python
