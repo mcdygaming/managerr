@@ -14,8 +14,8 @@ MONGO_DB = "PrimeMega"
 
 
 client = MongoClient()
-client = MongoClient(MONGO_DB)
-motor = motor_asyncio.AsyncIOMotorClient(MONGO_DB)
+client = MongoClient(MONGO_DB_URI)
+motor = motor_asyncio.AsyncIOMotorClient(MONGO_DB_URI)
 db = motor[MONGO_DB]
 db = client["PrimeMega"]
 try:
