@@ -19,6 +19,4 @@ _DB = DB_CLIENT["Fumika"]
 def get_collection(name: str) -> collection:
     """Get the collection from database."""
     return _DB[name]
-© 2022 GitHub, Inc.
-Terms
-Pri
+
