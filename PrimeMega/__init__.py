@@ -78,7 +78,10 @@ if ENV:
         WOLVES = {int(x) for x in os.environ.get("WOLVES", "").split()}
     except ValueError: 
         raise Exception("Your whitelisted users list does not contain valid integers.")
-
+    try:
+        SPAMMERS = {int(x) for x in os.environ.get("SPAMMERS", "").split()}
+    except ValueError:
+        raise Exception("Your spammers users list does not contain valid integers.")
     try:
         TIGERS = {int(x) for x in os.environ.get("TIGERS", "").split()}
     except ValueError:
@@ -308,12 +311,73 @@ async def eor(msg: Message, **kwargs):
     spec = getfullargspec(func.__wrapped__).args
     return await func(**{k: v for k, v in kwargs.items() if k in spec})
 
+try:
+    from PrimeMega.antispam import antispam_restrict_user, antispam_cek_user, detect_user
+
+    LOGGER.info(
+        f"{dispatcher.bot.first_name} Successfull loaded antispam to the system"
+    )
+    antispam_module = True
+except ModuleNotFoundError:
+    antispam_module = False
+
+def spamcheck(func):
+    @wraps(func)
+    def check_user(update, context, *args, **kwargs):
+        try:
+            chat = update.effective_chat
+            user = update.effective_user
+            message = update.effective_message
+        except AttributeError:
+            return
+        # If msg from self, return True
+        if user.id == context.bot.id:
+            return False
+        if user.id == "777000":
+            return False
+        if DEBUG:
+            print(
+                "{} | {} | {} | {}".format(
+                    message.text or message.caption,
+                    user.id,
+                    message.chat.title,
+                    chat.id,
+                )
+            )
+        if antispam_module and ANTISPAM_TOGGLE:
+            parsing_date = time.mktime(message.date.timetuple())
+            detecting = detect_user(user.id, chat.id, message, parsing_date)
+            if detecting:
+                return False
+            antispam_restrict_user(user.id, parsing_date)
+        if int(user.id) in SPAMMERS:
+            if DEBUG:
+                print("This user is a spammer!")
+            return False
+        if str(chat.id) in GROUP_BLACKLIST:
+            dispatcher.bot.sendMessage(
+                chat.id, "This group is blacklisted, i'm outa here..."
+            )
+            dispatcher.bot.leaveChat(chat.id)
+            return False
+        return func(update, context, *args, **kwargs)
+
+    return 
+
+def spamfilters(text, user_id, chat_id):
+    # print("{} | {} | {}".format(text, user_id, chat_id))
+    if int(user_id) not in SPAMMERS:
+        return False
+
+    print("This user is a spammer!")
+    return True
 
 DRAGONS = list(DRAGONS) + list(DEV_USERS)
 DEV_USERS = list(DEV_USERS)
 WOLVES = list(WOLVES)
 DEMONS = list(DEMONS)
 TIGERS = list(TIGERS)
+SPAMMERS = list(SPAMMERS)
 
 # Load at end to ensure all prev variables have been set
 from PrimeMega.modules.helper_funcs.handlers import (
