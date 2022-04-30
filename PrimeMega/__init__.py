@@ -165,7 +165,10 @@ else:
         WOLVES = {int(x) for x in Config.WOLVES or []}
     except ValueError:
         raise Exception("Your whitelisted users list does not contain valid integers.")
-
+    try:
+        SPAMMERS = {int(x) for x in Config.SPAMMERS or []}
+    except ValueError:
+        raise Exception("Your spammers users list does not contain valid integers.")
     try:
         TIGERS = {int(x) for x in Config.TIGERS or []}
     except ValueError:
