@@ -55,14 +55,6 @@ from telegram.ext.dispatcher import DispatcherHandlerStop, run_async
 from telegram.utils.helpers import escape_markdown
 from PrimeMega.modules.language import gs
 
-from fastapi import FastAPI
-
-app = FastAPI()  # notice that the app instance is called `app`, this is very important.
-
-@app.get("/")
-async def read_root():
-    return {"Hello": "World"}
-
 
 def get_readable_time(seconds: int) -> str:
     count = 0
