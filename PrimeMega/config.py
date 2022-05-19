@@ -14,9 +14,9 @@ class Config(object):
     # REQUIRED
     # Login to https://my.telegram.org and fill in these slots with the details given by it
 
-   API_ID = 123456  # integer value, dont use ""
-   API_HASH = "awoo"
-   TOKEN = "BOT_TOKEN"  # This var used to be API_KEY but it is now TOKEN, adjust accordingly.
+   API_ID = 10655360  # integer value, dont use ""
+   API_HASH = "32aa547bd6cc2e9f61063cd31e0bc0a5"
+   TOKEN = "2109887867:AAFeWR4FuLX5gKOH5-xQzsrnyx-9ZYfTbGQ"  # This var used to be API_KEY but it is now TOKEN, adjust accordingly.
    OWNER_ID = 1423479724  # If you dont know, run the bot and do /id in your private chat with it, also an integer
    OWNER_USERNAME = "Tonic880"
    SUPPORT_CHAT = "PrimeSupportGroup"  # Your own group for support, do not add the @
@@ -28,7 +28,7 @@ class Config(object):
     )  # Prints information like gbans, sudo promotes, AI enabled disable states that may help in debugging and shit
    ERROR_LOGS = -1001376025003
     # RECOMMENDED
-   SQLALCHEMY_DATABASE_URI = "postgres://Prime:gg123@#$@47.88.102.159:5432/prime"  # needed for any database modules
+   SQLALCHEMY_DATABASE_URI = "postgresql://qpvhdjtv:4agaueN759QRvJOk6uaiOrobcAUC7_yP@rogue.db.elephantsql.com/qpvhdjtv"  # needed for any database modules
    LOAD = []
    NO_LOAD = ["rss", "cleaner", "connection", "math"]
    WEBHOOK = False
@@ -36,12 +36,12 @@ class Config(object):
    URL = None
    SPAMWATCH_API = ""  # go to support.spamwat.ch to get key
    SPAMWATCH_SUPPORT_CHAT = "@SpamWatchSupport"
-   MONGO_DB_URI = "mongo+srv"
+   MONGO_DB_URI = "mongodb+srv://PrimeMega:PrimeMega@cluster0.eznli.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
    MONGO_DB = "Prime Mega"
    MONGO_PORT = "27017"
-   ARQ_API = ""
-   ARQ_API_KEY = ""
-   ARQ_API_URL = ""
+   ARQ_API = "OCRCCG-ABFPZL-VCWOWW-MLLYOA-ARQ"
+   ARQ_API_KEY = "OCRCCG-ABFPZL-VCWOWW-MLLYOA-ARQ"
+   ARQ_API_URL = "https://arq.hamker.in"
    BOT_NAME = "Prime Mega"
    BOT_USERNAME = "PrimeMegaBot"
    BOT_ID = "2109887867"
@@ -87,7 +87,7 @@ class Config(object):
    ALLOW_CHATS = None
    MONGO_DB = "Prime"
    TEMP_DOWNLOAD_DIRECTORY = "./"
-   STRING_SESSION = "1BVtsOMQBu4OWQcqgIHDD6cR-Pvu47XV69rrEZWJthenLrvB23MhDYXAC4V-EZ5XEgu6OFNtM5bFTgGVoKnuB-_s4DvoO8fx3CnoueRdwLn61Khky0aT6qiAccWN31wkG1PJfyckgV59VC0T3v-wwQV62syy3ug_7iQ4Wx8AzhCjiYah-qVcozdA8k8NsX6q5sx-sqZfpc_ZkJIyoBQyJlUwe7-v-WboR6EQAoaggIgZZHEu5L_2TDANfbE4jMqedSl6fI9sKhWjBeXKZdipbtZShAmO5uEJVS6DoMOsZiOzm-ehh2Rkc8u3OPSdf744gIi5OWulmNT6_zgnPoNs8r5gB0AH3XvA="
+   STRING_SESSION = "1BVtsOKcBu6uizCwzLOmIS-2VJxOIvCGekP31DBLNbhRAtxZSa2ys3BMNsCNhN_jVqF51D5v77YK_oEse0KBLO5m7YHe88q0dBrVvl4hDYk3bCrZTW5n5YXeSj5qm6h-9-8a8pDwbsgtO8roGZMftSR3Xj5O-6VwNQF1qW-iGwuXkXHmG-Ro8fdVqbbbFSRej2v_TSUHudTlY30DxIh5HBNcRUKaO2tQ5oXWSkarIkG0ch6qT3Im6LTXoV54zpAZ_eGZrz0KU2QlUBOfwUW8rs9yQwR-9Px2m7ahotPTHdtVBK3xATFWRPYpOx2zsoL57VTPm0RvylF_R7_cAsOez-0N9cDVuRf0="
 
 
 class Production(Config):
