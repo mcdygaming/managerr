@@ -13,7 +13,7 @@ motor = motor_asyncio.AsyncIOMotorClient(MONGO_DB_URI)
 db = motor[MONGO_DB]
 engine = AIOEngine(motor, MONGO_DB)
 DB_CLIENT = MongoClient(MONGO_DB_URI)
-_DB = DB_CLIENT["Prime Mega"]
+_DB = DB_CLIENT["Prime"]
 
 
 def get_collection(name: str) -> collection:
