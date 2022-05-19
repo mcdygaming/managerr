@@ -9,7 +9,7 @@ from threading import RLock
 from telegram import Chat, Update, ChatMember
 from telegram.ext import CallbackContext as Ctx, CallbackQueryHandler as CBHandler
 
-from Fumika import dispatcher
+from PrimeMega import dispatcher
 
 from PrimeMega.modules.helper_funcs.admin_status_helpers import (
     ADMINS_CACHE as A_CACHE,
