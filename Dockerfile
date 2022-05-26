@@ -34,6 +34,7 @@ RUN apt update && apt upgrade -y && \
     libxml2-dev \
     libxslt1-dev \
     python3-pip \
+    python -m pip install --upgrade pip \
     python3-requests \
     python3-sqlalchemy \
     python3-tz \
