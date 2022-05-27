@@ -7,7 +7,7 @@ beautifulsoup4
 requests
 requests_html
 python-telegram-bot==13.11.0
-SQLAlchemy==1.4.31
+SQLAlchemy
 psycopg2-binary
 feedparser
 PyYAML
@@ -25,7 +25,7 @@ psutil
 aiohttp
 Pillow
 CurrencyConverter
-googletrans==4.0.0rc1
+googletrans
 google-trans-new
 jikanpy
 speedtest-cli
@@ -47,7 +47,7 @@ TgCrypto
 pyrogram==1.4.16
 PyDictionary
 git+https://github.com/Sorrybabe/downloader
-youtube_search_python==1.4.9
+youtube_search_python
 youtube_search
 lyrics_extractor
 asyncio
@@ -75,11 +75,11 @@ better_profanity
 textblob 
 nudepy
 nekos.py
-motor==2.4.0
+motor
 gpytranslate
 fontTools
-opencv-python-headless==4.5.4.60
-odmantic==0.4.0
+opencv-python-headless
+odmantic
 tzlocal
 pendulum
 fuzzysearch
