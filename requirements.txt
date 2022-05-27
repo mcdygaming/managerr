@@ -1,5 +1,6 @@
 future
 emoji
+numpy
 lxml
 wget
 gtts
